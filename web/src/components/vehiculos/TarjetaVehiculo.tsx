@@ -9,6 +9,7 @@ import {
   formatearPesos,
   formatearPesosCompacto,
 } from "@/lib/formato";
+import { rutaPublica } from "@/lib/rutas";
 import { etiquetas, type Vehiculo } from "@/lib/schemas";
 
 interface Props {
@@ -26,7 +27,7 @@ export default function TarjetaVehiculo({ vehiculo, prioridad = false }: Props) 
     <article className="group relative flex flex-col overflow-hidden rounded-card border border-arena-200 bg-white shadow-suave transition-shadow hover:shadow-elevada">
       <div className="relative aspect-3/2 overflow-hidden bg-arena-200">
         <Image
-          src={portada.src}
+          src={rutaPublica(portada.src)}
           alt={portada.alt}
           fill
           sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 92vw"

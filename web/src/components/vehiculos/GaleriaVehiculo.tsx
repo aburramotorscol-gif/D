@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
+import { rutaPublica } from "@/lib/rutas";
 import type { Imagen } from "@/lib/schemas";
 
 /**
@@ -21,7 +22,7 @@ export default function GaleriaVehiculo({ imagenes }: { imagenes: Imagen[] }) {
     <div>
       <div className="relative aspect-3/2 overflow-hidden rounded-card bg-arena-200">
         <Image
-          src={actual.src}
+          src={rutaPublica(actual.src)}
           alt={actual.alt}
           fill
           sizes="(min-width: 1024px) 60vw, 100vw"
@@ -71,7 +72,7 @@ export default function GaleriaVehiculo({ imagenes }: { imagenes: Imagen[] }) {
               >
                 <span className="sr-only">Ver {imagen.alt}</span>
                 <Image
-                  src={imagen.src}
+                  src={rutaPublica(imagen.src)}
                   alt=""
                   fill
                   sizes="120px"
