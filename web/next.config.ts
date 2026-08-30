@@ -28,11 +28,11 @@ const nextConfig: NextConfig = {
   },
 
   typescript: {
+    // Un error de tipos rompe el build a proposito: no se publica codigo roto.
     ignoreBuildErrors: false,
   },
-  eslint: {
-    ignoreDuringBuilds: false,
-  },
+  // Next 16 ya no acepta la clave `eslint` aqui. El lint corre aparte
+  // (`npm run lint`) y esta en el workflow de CI.
 };
 
 export default nextConfig;

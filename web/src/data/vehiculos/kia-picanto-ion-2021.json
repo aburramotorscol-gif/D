@@ -1,0 +1,50 @@
+{
+  "slug": "kia-picanto-ion-2021",
+  "marca": "Kia",
+  "linea": "Picanto",
+  "version": "Ion 1.2 MT",
+  "anio": 2021,
+  "precio": 42500000,
+  "kilometraje": 34100,
+  "transmision": "manual",
+  "combustible": "gasolina",
+  "carroceria": "hatchback",
+  "color": "Azul Sporty",
+  "puertas": 5,
+  "cilindraje": 1248,
+  "traccion": "4x2",
+  "placa_termina_en": 1,
+  "origen": "consignacion",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Picanto Ion perfecto como primer carro o para moverse en Medellín: se parquea en cualquier parte y rinde muy bien en ciudad. Mantenimientos al día en Kia. En consignación, con papeles verificados por nosotros.",
+  "caracteristicas": [
+    "Pantalla con Android Auto y Apple CarPlay",
+    "Cámara de reversa",
+    "Vidrios y espejos eléctricos",
+    "Aire acondicionado",
+    "Dirección eléctrica",
+    "Frenos ABS",
+    "Dos airbags",
+    "Bajo consumo de combustible"
+  ],
+  "publicado_en": "2026-08-20",
+  "imagenes": [
+    {
+      "src": "/vehiculos/kia-picanto-ion-2021/1.svg",
+      "alt": "Kia Picanto Ion 1.2 MT 2021 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/kia-picanto-ion-2021/2.svg",
+      "alt": "Kia Picanto Ion 1.2 MT 2021 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/kia-picanto-ion-2021/3.svg",
+      "alt": "Kia Picanto Ion 1.2 MT 2021 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/kia-picanto-ion-2021/4.svg",
+      "alt": "Kia Picanto Ion 1.2 MT 2021 — interior"
+    }
+  ]
+}

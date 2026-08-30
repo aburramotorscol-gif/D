@@ -1,0 +1,50 @@
+{
+  "slug": "chevrolet-tracker-premier-2023",
+  "marca": "Chevrolet",
+  "linea": "Tracker",
+  "version": "Premier 1.2 Turbo AT",
+  "anio": 2023,
+  "precio": 92400000,
+  "kilometraje": 22300,
+  "transmision": "automatica",
+  "combustible": "gasolina",
+  "carroceria": "suv",
+  "color": "Blanco Summit",
+  "puertas": 5,
+  "cilindraje": 1199,
+  "traccion": "4x2",
+  "placa_termina_en": 3,
+  "origen": "propio",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Tracker Premier prácticamente nueva, con garantía de fábrica vigente. Es la versión tope de gama: cuero, techo panorámico y todas las ayudas de seguridad. Recibimos tu carro actual como parte de pago.",
+  "caracteristicas": [
+    "Motor 1.2 turbo",
+    "Techo panorámico",
+    "Sillas en cuero",
+    "Alerta de colisión frontal",
+    "Alerta de punto ciego",
+    "Cámara de reversa de alta definición",
+    "Arranque remoto",
+    "Seis airbags"
+  ],
+  "publicado_en": "2026-08-27",
+  "imagenes": [
+    {
+      "src": "/vehiculos/chevrolet-tracker-premier-2023/1.svg",
+      "alt": "Chevrolet Tracker Premier 1.2 Turbo AT 2023 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/chevrolet-tracker-premier-2023/2.svg",
+      "alt": "Chevrolet Tracker Premier 1.2 Turbo AT 2023 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/chevrolet-tracker-premier-2023/3.svg",
+      "alt": "Chevrolet Tracker Premier 1.2 Turbo AT 2023 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/chevrolet-tracker-premier-2023/4.svg",
+      "alt": "Chevrolet Tracker Premier 1.2 Turbo AT 2023 — interior"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 427" width="640" height="427" role="img" aria-label="Imagen de referencia pendiente de Renault Duster">
+  <defs>
+    <linearGradient id="fondo" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0%" stop-color="#4a5a63" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#4a5a63" stop-opacity="0.6"/>
+    </linearGradient>
+    <pattern id="rejilla" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0 L0 0 0 32" fill="none" stroke="#faf8f5" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="640" height="427" fill="url(#fondo)"/>
+  <rect width="640" height="427" fill="url(#rejilla)"/>
+  <g transform="translate(0,60)">
+    <ellipse cx="320" cy="258" rx="248" ry="15" fill="#faf8f5" opacity="0.10"/>
+    <path d="M60 250 L60 205 Q60 190 78 184 L140 166 Q195 122 250 120 L360 120 Q420 122 470 166 L560 186 Q580 192 580 210 L580 250 Z" fill="#faf8f5" opacity="0.20"/>
+    <circle cx="170" cy="250" r="34" fill="#faf8f5" opacity="0.26"/>
+    <circle cx="170" cy="250" r="15" fill="#faf8f5" opacity="0.12"/>
+    <circle cx="462" cy="250" r="34" fill="#faf8f5" opacity="0.26"/>
+    <circle cx="462" cy="250" r="15" fill="#faf8f5" opacity="0.12"/>
+  </g>
+  <text x="32" y="48" font-family="system-ui, sans-serif" font-size="23" font-weight="700" fill="#faf8f5">Renault Duster</text>
+  <text x="32" y="74" font-family="system-ui, sans-serif" font-size="15" fill="#faf8f5" opacity="0.8">Intens 1.6 MT · 2021</text>
+  <text x="32" y="398" font-family="system-ui, sans-serif" font-size="12.5" letter-spacing="1.6" fill="#faf8f5" opacity="0.68">FOTO PENDIENTE · VISTA FRONTAL</text>
+</svg>
