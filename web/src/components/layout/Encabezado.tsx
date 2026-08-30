@@ -28,10 +28,8 @@ export default function Encabezado() {
   const [abierto, setAbierto] = useState(false);
   const ruta = usePathname();
 
-  // Cierra el menú al navegar: en móvil quedaría tapando la página nueva.
-  useEffect(() => {
-    setAbierto(false);
-  }, [ruta]);
+  // El menú se cierra en el onClick de cada enlace, no en un efecto sobre la
+  // ruta: hacerlo con useEffect provoca un render en cascada innecesario.
 
   // Bloquea el scroll del fondo mientras el menú está abierto.
   useEffect(() => {
@@ -115,6 +113,7 @@ export default function Encabezado() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    onClick={() => setAbierto(false)}
                     aria-current={esActiva(item.href) ? "page" : undefined}
                     className={`block rounded-xl px-4 py-3 text-base font-medium ${
                       esActiva(item.href)
@@ -129,6 +128,7 @@ export default function Encabezado() {
               <li className="mt-2">
                 <Link
                   href="/contacto"
+                  onClick={() => setAbierto(false)}
                   className="block rounded-xl px-4 py-3 text-base font-medium text-arena-800 hover:bg-arena-100"
                 >
                   Contacto
