@@ -1,0 +1,35 @@
+[project]
+name = "aburra-motors-api"
+version = "0.1.0"
+description = "API de Aburra Motors: inventario de vehiculos, leads comerciales y simulaciones de credito."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "sqlmodel>=0.0.22",
+    "pydantic>=2.9",
+    "pydantic-settings>=2.6",
+    "alembic>=1.14",
+    "python-json-logger>=3.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3",
+    "httpx>=0.27",
+    "ruff>=0.8",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+exclude = ["alembic/versions"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "C4", "SIM"]
+ignore = ["B008"]  # FastAPI usa llamadas en valores por defecto (Depends, Query)
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+filterwarnings = ["ignore::DeprecationWarning"]
