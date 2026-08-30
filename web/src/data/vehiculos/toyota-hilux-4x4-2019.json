@@ -1,0 +1,50 @@
+{
+  "slug": "toyota-hilux-4x4-2019",
+  "marca": "Toyota",
+  "linea": "Hilux",
+  "version": "2.4 Diésel 4x4 MT",
+  "anio": 2019,
+  "precio": 148900000,
+  "kilometraje": 96400,
+  "transmision": "manual",
+  "combustible": "diesel",
+  "carroceria": "pickup",
+  "color": "Blanco Perla",
+  "puertas": 4,
+  "cilindraje": 2393,
+  "traccion": "4x4",
+  "placa_termina_en": 9,
+  "origen": "propio",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Hilux 4x4 de trabajo, con recorrido honesto y mantenimiento documentado en Toyota. Motor diésel 2.4 con excelente torque para carga y trocha. Incluye platón con forro, barra antivuelco y kit de arrastre.",
+  "caracteristicas": [
+    "Tracción 4x4 con reductora",
+    "Bloqueo de diferencial trasero",
+    "Platón con forro y barra antivuelco",
+    "Kit de arrastre",
+    "Control de descenso",
+    "Aire acondicionado",
+    "Bluetooth",
+    "Llantas AT recién cambiadas"
+  ],
+  "publicado_en": "2026-08-12",
+  "imagenes": [
+    {
+      "src": "/vehiculos/toyota-hilux-4x4-2019/1.svg",
+      "alt": "Toyota Hilux 2.4 Diésel 4x4 MT 2019 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/toyota-hilux-4x4-2019/2.svg",
+      "alt": "Toyota Hilux 2.4 Diésel 4x4 MT 2019 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/toyota-hilux-4x4-2019/3.svg",
+      "alt": "Toyota Hilux 2.4 Diésel 4x4 MT 2019 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/toyota-hilux-4x4-2019/4.svg",
+      "alt": "Toyota Hilux 2.4 Diésel 4x4 MT 2019 — interior"
+    }
+  ]
+}

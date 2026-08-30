@@ -1,0 +1,50 @@
+{
+  "slug": "chevrolet-onix-turbo-rs-2022",
+  "marca": "Chevrolet",
+  "linea": "Onix",
+  "version": "Turbo RS 1.0 AT",
+  "anio": 2022,
+  "precio": 59900000,
+  "kilometraje": 28700,
+  "transmision": "automatica",
+  "combustible": "gasolina",
+  "carroceria": "sedan",
+  "color": "Negro Ébano",
+  "puertas": 4,
+  "cilindraje": 999,
+  "traccion": "4x2",
+  "placa_termina_en": 4,
+  "origen": "consignacion",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Onix Turbo RS con muy poco recorrido y garantía de fábrica todavía vigente. El motor turbo de tres cilindros rinde como un 1.6 pero gasta como un 1.0. Vehículo en consignación: el propietario conserva la titularidad y nosotros gestionamos toda la venta.",
+  "caracteristicas": [
+    "Motor 1.0 turbo",
+    "Pantalla MyLink de 8 pulgadas",
+    "Wi-Fi integrado OnStar",
+    "Cámara de reversa",
+    "Encendido remoto",
+    "Control crucero",
+    "Seis airbags",
+    "Rines de 16 pulgadas diamantados"
+  ],
+  "publicado_en": "2026-08-25",
+  "imagenes": [
+    {
+      "src": "/vehiculos/chevrolet-onix-turbo-rs-2022/1.svg",
+      "alt": "Chevrolet Onix Turbo RS 1.0 AT 2022 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/chevrolet-onix-turbo-rs-2022/2.svg",
+      "alt": "Chevrolet Onix Turbo RS 1.0 AT 2022 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/chevrolet-onix-turbo-rs-2022/3.svg",
+      "alt": "Chevrolet Onix Turbo RS 1.0 AT 2022 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/chevrolet-onix-turbo-rs-2022/4.svg",
+      "alt": "Chevrolet Onix Turbo RS 1.0 AT 2022 — interior"
+    }
+  ]
+}

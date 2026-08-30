@@ -1,0 +1,50 @@
+{
+  "slug": "renault-logan-life-2020",
+  "marca": "Renault",
+  "linea": "Logan",
+  "version": "Life 1.6 MT",
+  "anio": 2020,
+  "precio": 38900000,
+  "kilometraje": 62800,
+  "transmision": "manual",
+  "combustible": "gasolina",
+  "carroceria": "sedan",
+  "color": "Blanco Glaciar",
+  "puertas": 4,
+  "cilindraje": 1598,
+  "traccion": "4x2",
+  "placa_termina_en": 8,
+  "origen": "consignacion",
+  "estado": "disponible",
+  "destacado": false,
+  "descripcion": "Logan Life con el baúl más grande de su categoría, muy buscado para trabajo en plataformas. Mecánica Renault sencilla y repuestos económicos en todo el país. En consignación, con revisión técnico-mecánica vigente.",
+  "caracteristicas": [
+    "Baúl de 510 litros",
+    "Aire acondicionado",
+    "Vidrios eléctricos delanteros",
+    "Radio con Bluetooth y USB",
+    "Frenos ABS",
+    "Dos airbags",
+    "Revisión técnico-mecánica vigente",
+    "Motor 1.6 de bajo mantenimiento"
+  ],
+  "publicado_en": "2026-08-14",
+  "imagenes": [
+    {
+      "src": "/vehiculos/renault-logan-life-2020/1.svg",
+      "alt": "Renault Logan Life 1.6 MT 2020 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/renault-logan-life-2020/2.svg",
+      "alt": "Renault Logan Life 1.6 MT 2020 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/renault-logan-life-2020/3.svg",
+      "alt": "Renault Logan Life 1.6 MT 2020 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/renault-logan-life-2020/4.svg",
+      "alt": "Renault Logan Life 1.6 MT 2020 — interior"
+    }
+  ]
+}

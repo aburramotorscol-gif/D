@@ -1,0 +1,50 @@
+{
+  "slug": "nissan-kicks-advance-2022",
+  "marca": "Nissan",
+  "linea": "Kicks",
+  "version": "Advance 1.6 CVT",
+  "anio": 2022,
+  "precio": 84900000,
+  "kilometraje": 31800,
+  "transmision": "automatica",
+  "combustible": "gasolina",
+  "carroceria": "suv",
+  "color": "Gris Grafito con techo negro",
+  "puertas": 5,
+  "cilindraje": 1598,
+  "traccion": "4x2",
+  "placa_termina_en": 6,
+  "origen": "propio",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Kicks Advance bitono, una SUV urbana cómoda y con muy buena visibilidad. Caja CVT suave, ideal para el tráfico diario. Único dueño, sin reporte de siniestros y con garantía mecánica de tres meses.",
+  "caracteristicas": [
+    "Caja automática CVT",
+    "Cámara 360 grados",
+    "Pantalla de 8 pulgadas con espejeo",
+    "Sensores delanteros y traseros",
+    "Climatizador automático",
+    "Control crucero",
+    "Techo bitono",
+    "Rines de 17 pulgadas"
+  ],
+  "publicado_en": "2026-08-26",
+  "imagenes": [
+    {
+      "src": "/vehiculos/nissan-kicks-advance-2022/1.svg",
+      "alt": "Nissan Kicks Advance 1.6 CVT 2022 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/nissan-kicks-advance-2022/2.svg",
+      "alt": "Nissan Kicks Advance 1.6 CVT 2022 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/nissan-kicks-advance-2022/3.svg",
+      "alt": "Nissan Kicks Advance 1.6 CVT 2022 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/nissan-kicks-advance-2022/4.svg",
+      "alt": "Nissan Kicks Advance 1.6 CVT 2022 — interior"
+    }
+  ]
+}

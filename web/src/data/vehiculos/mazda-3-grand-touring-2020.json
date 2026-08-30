@@ -1,0 +1,50 @@
+{
+  "slug": "mazda-3-grand-touring-2020",
+  "marca": "Mazda",
+  "linea": "Mazda 3",
+  "version": "Grand Touring 2.0 AT",
+  "anio": 2020,
+  "precio": 78500000,
+  "kilometraje": 39200,
+  "transmision": "automatica",
+  "combustible": "gasolina",
+  "carroceria": "sedan",
+  "color": "Rojo Soul Crystal",
+  "puertas": 4,
+  "cilindraje": 1998,
+  "traccion": "4x2",
+  "placa_termina_en": 2,
+  "origen": "propio",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Mazda 3 Grand Touring en excelente estado, con cuero original y techo corredizo. Un sedán que se maneja como un carro del doble de su precio. Revisión de 150 puntos aprobada y garantía mecánica de tres meses incluida.",
+  "caracteristicas": [
+    "Techo corredizo eléctrico",
+    "Sillas en cuero",
+    "Head-up display",
+    "Alerta de punto ciego",
+    "Cámara de reversa",
+    "Arranque por botón",
+    "Climatizador bizona",
+    "Seis airbags"
+  ],
+  "publicado_en": "2026-08-22",
+  "imagenes": [
+    {
+      "src": "/vehiculos/mazda-3-grand-touring-2020/1.svg",
+      "alt": "Mazda Mazda 3 Grand Touring 2.0 AT 2020 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/mazda-3-grand-touring-2020/2.svg",
+      "alt": "Mazda Mazda 3 Grand Touring 2.0 AT 2020 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/mazda-3-grand-touring-2020/3.svg",
+      "alt": "Mazda Mazda 3 Grand Touring 2.0 AT 2020 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/mazda-3-grand-touring-2020/4.svg",
+      "alt": "Mazda Mazda 3 Grand Touring 2.0 AT 2020 — interior"
+    }
+  ]
+}

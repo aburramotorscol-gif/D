@@ -1,0 +1,50 @@
+{
+  "slug": "renault-duster-intens-2021",
+  "marca": "Renault",
+  "linea": "Duster",
+  "version": "Intens 1.6 MT",
+  "anio": 2021,
+  "precio": 62900000,
+  "kilometraje": 48500,
+  "transmision": "manual",
+  "combustible": "gasolina",
+  "carroceria": "suv",
+  "color": "Gris Cassiopée",
+  "puertas": 5,
+  "cilindraje": 1598,
+  "traccion": "4x2",
+  "placa_termina_en": 7,
+  "origen": "propio",
+  "estado": "disponible",
+  "destacado": true,
+  "descripcion": "Duster Intens de único dueño, con mantenimientos al día en concesionario Renault. Ideal para carretera y para el trancón del Valle de Aburrá: consume poco y aguanta hueco. Papeles al día y traspaso listo para hacerse el mismo día.",
+  "caracteristicas": [
+    "Pantalla táctil con Android Auto y Apple CarPlay",
+    "Cámara de reversa",
+    "Sensores de parqueo traseros",
+    "Aire acondicionado",
+    "Rines de lujo de 16 pulgadas",
+    "Control de estabilidad ESP",
+    "Cuatro airbags",
+    "Barras de techo"
+  ],
+  "publicado_en": "2026-08-18",
+  "imagenes": [
+    {
+      "src": "/vehiculos/renault-duster-intens-2021/1.svg",
+      "alt": "Renault Duster Intens 1.6 MT 2021 — vista frontal"
+    },
+    {
+      "src": "/vehiculos/renault-duster-intens-2021/2.svg",
+      "alt": "Renault Duster Intens 1.6 MT 2021 — vista lateral"
+    },
+    {
+      "src": "/vehiculos/renault-duster-intens-2021/3.svg",
+      "alt": "Renault Duster Intens 1.6 MT 2021 — vista trasera"
+    },
+    {
+      "src": "/vehiculos/renault-duster-intens-2021/4.svg",
+      "alt": "Renault Duster Intens 1.6 MT 2021 — interior"
+    }
+  ]
+}

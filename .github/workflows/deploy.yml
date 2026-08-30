@@ -1,0 +1,71 @@
+name: Desplegar en GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  # Permite lanzarlo a mano desde la pestaña Actions.
+  workflow_dispatch:
+
+# Permisos que necesitan las acciones oficiales de Pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un solo despliegue a la vez. No cancela el que ya está corriendo, para no
+# dejar el sitio a medio publicar.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Construir el sitio estático
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+
+      - name: Configurar Pages
+        uses: actions/configure-pages@v5
+
+      - name: Instalar dependencias
+        working-directory: web
+        run: npm ci
+
+      - name: Build estático
+        working-directory: web
+        env:
+          # El repositorio se llama "AburraMotors", así que el sitio queda en
+          # https://<usuario>.github.io/AburraMotors y necesita este prefijo.
+          # Se toma del nombre real del repo, no está escrito a mano.
+          NEXT_PUBLIC_BASE_PATH: /${{ github.event.repository.name }}
+        run: npm run build
+
+      - name: Evitar que Jekyll procese el sitio
+        # Sin este archivo, GitHub Pages ignora las carpetas que empiezan por
+        # guion bajo, y Next genera todos sus recursos dentro de /_next.
+        run: touch web/out/.nojekyll
+
+      - name: Subir el artefacto
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web/out
+
+  deploy:
+    name: Publicar
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Desplegar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
