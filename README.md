@@ -36,7 +36,11 @@ AburraMotors/
 │   │       ├── formato.ts       Pesos colombianos, kilometraje, fechas
 │   │       ├── jsonld.ts        Datos estructurados schema.org
 │   │       └── rutas.ts         Prefijo basePath para imágenes de public/
-│   └── public/vehiculos/<slug>/ Imágenes (hoy placeholders SVG)
+│   ├── public/marca/            Logotipo, isotipo y favicon que sirve el sitio
+│   ├── public/vehiculos/<slug>/ Imágenes (hoy placeholders SVG)
+│   └── src/fuentes/             Oswald e Inter auto-alojadas (.woff2)
+│
+├── marca/originales/            Archivos de marca tal como los entregó diseño
 │
 ├── api/                         Backend — Python 3.12 + FastAPI + SQLModel
 │   ├── app/
