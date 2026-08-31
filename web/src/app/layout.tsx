@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Sora } from "next/font/google";
+import localFont from "next/font/local";
 
 import BotonWhatsAppFlotante from "@/components/layout/BotonWhatsAppFlotante";
 import Encabezado from "@/components/layout/Encabezado";
@@ -10,17 +10,40 @@ import { siteConfig } from "@/config/site";
 
 import "./globals.css";
 
-const sora = Sora({
-  subsets: ["latin"],
+/**
+ * Fuentes auto-alojadas desde src/fuentes/.
+ *
+ * Se descargaron una sola vez de Google Fonts y viven en el repositorio, en
+ * lugar de usar next/font/google. Tres razones:
+ *   1. El build no depende de que fonts.gstatic.com responda. Ya nos tumbo
+ *      una compilacion.
+ *   2. El sitio publicado no hace peticiones a servidores de Google, que es
+ *      mejor para la privacidad de los visitantes.
+ *   3. Menos conexiones externas en el primer render.
+ *
+ * Son las variables de ambas familias (un archivo cubre de 400 a 700).
+ */
+
+// Oswald: titulares, mayusculas, precios y numeros del proceso.
+const oswald = localFont({
+  src: [
+    { path: "../fuentes/oswald-latin.woff2", weight: "400 700", style: "normal" },
+    { path: "../fuentes/oswald-latin-ext.woff2", weight: "400 700", style: "normal" },
+  ],
   display: "swap",
   variable: "--fuente-display",
-  weight: ["500", "600", "700"],
+  fallback: ["Arial Narrow", "system-ui", "sans-serif"],
 });
 
-const inter = Inter({
-  subsets: ["latin"],
+// Inter: parrafos, navegacion, botones y campos del buscador.
+const inter = localFont({
+  src: [
+    { path: "../fuentes/inter-latin.woff2", weight: "400 700", style: "normal" },
+    { path: "../fuentes/inter-latin-ext.woff2", weight: "400 700", style: "normal" },
+  ],
   display: "swap",
   variable: "--fuente-sans",
+  fallback: ["system-ui", "-apple-system", "Segoe UI", "sans-serif"],
 });
 
 export const metadata: Metadata = {
@@ -64,7 +87,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#133531",
+  themeColor: "#0B0D0C",
   width: "device-width",
   initialScale: 1,
 };
@@ -73,8 +96,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-CO" className={`${sora.variable} ${inter.variable}`}>
-      <body className="flex min-h-dvh flex-col bg-arena-50 text-arena-900 antialiased">
+    <html lang="es-CO" className={`${oswald.variable} ${inter.variable}`}>
+      <body className="flex min-h-dvh flex-col bg-fondo text-hueso antialiased">
         <a href="#contenido" className="salto-contenido">
           Saltar al contenido principal
         </a>
