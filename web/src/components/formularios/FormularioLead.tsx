@@ -40,10 +40,10 @@ interface Props {
 }
 
 const CLASES_CAMPO =
-  "w-full rounded-xl border border-arena-300 bg-white px-4 py-3 text-arena-900 " +
-  "placeholder:text-arena-400 focus:border-marca-600 focus:outline-none";
+  "w-full rounded-xl border border-celeste/20 bg-panel px-4 py-3 text-hueso " +
+  "placeholder:text-hueso/55 focus:border-teal-claro focus:outline-none";
 
-const CLASES_ETIQUETA = "mb-2 block text-sm font-semibold text-arena-800";
+const CLASES_ETIQUETA = "mb-2 block text-sm font-semibold text-hueso/85";
 
 export default function FormularioLead({
   tipo,
@@ -99,16 +99,16 @@ export default function FormularioLead({
     return (
       <div
         role="status"
-        className="rounded-card border border-marca-300 bg-marca-50 p-7 text-center"
+        className="rounded-card border border-teal-claro bg-panel p-7 text-center"
       >
         <CheckCircle2
           aria-hidden="true"
-          className="mx-auto size-11 text-marca-600"
+          className="mx-auto size-11 text-neon"
         />
-        <h3 className="mt-4 text-xl font-bold text-marca-900">
+        <h3 className="mt-4 text-xl font-bold text-hueso">
           Abrimos WhatsApp con tu solicitud
         </h3>
-        <p className="mx-auto mt-3 max-w-md leading-relaxed text-arena-700">
+        <p className="mx-auto mt-3 max-w-md leading-relaxed text-hueso/75">
           {queSigue ??
             "Solo tienes que darle enviar en el chat. Te respondemos el mismo día en horario de atención."}
         </p>
@@ -118,18 +118,18 @@ export default function FormularioLead({
             href={enviado.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-marca-800 px-6 py-3 font-semibold text-arena-50 hover:bg-marca-900"
+            className="mt-6 inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-hueso hover:bg-panel"
           >
             <MessageCircle aria-hidden="true" className="size-5" />
             ¿No se abrió? Abrir WhatsApp
           </a>
         )}
 
-        <p className="mt-5 text-sm text-arena-600">
+        <p className="mt-5 text-sm text-hueso/60">
           <button
             type="button"
             onClick={() => setEnviado(null)}
-            className="font-semibold text-marca-800 underline underline-offset-2"
+            className="font-semibold text-celeste underline underline-offset-2"
           >
             Enviar otra solicitud
           </button>
@@ -142,7 +142,7 @@ export default function FormularioLead({
     <form
       onSubmit={manejarEnvio}
       noValidate={false}
-      className="rounded-card border border-arena-200 bg-white p-6 sm:p-8"
+      className="rounded-card border border-celeste/15 bg-panel p-6 sm:p-8"
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="sm:col-span-2">
@@ -179,7 +179,7 @@ export default function FormularioLead({
 
         <div>
           <label htmlFor="email" className={CLASES_ETIQUETA}>
-            Correo <span className="font-normal text-arena-500">(opcional)</span>
+            Correo <span className="font-normal text-hueso/50">(opcional)</span>
           </label>
           <input
             id="email"
@@ -193,7 +193,7 @@ export default function FormularioLead({
 
         <div className="sm:col-span-2">
           <label htmlFor="ciudad" className={CLASES_ETIQUETA}>
-            Municipio <span className="font-normal text-arena-500">(opcional)</span>
+            Municipio <span className="font-normal text-hueso/50">(opcional)</span>
           </label>
           <input
             id="ciudad"
@@ -220,7 +220,7 @@ export default function FormularioLead({
                 {campo.requerido ? (
                   <span aria-hidden="true">*</span>
                 ) : (
-                  <span className="font-normal text-arena-500">(opcional)</span>
+                  <span className="font-normal text-hueso/50">(opcional)</span>
                 )}
               </label>
 
@@ -267,7 +267,7 @@ export default function FormularioLead({
               )}
 
               {campo.ayuda && (
-                <p id={idAyuda} className="mt-1.5 text-sm text-arena-600">
+                <p id={idAyuda} className="mt-1.5 text-sm text-hueso/60">
                   {campo.ayuda}
                 </p>
               )}
@@ -297,13 +297,13 @@ export default function FormularioLead({
           name="politica"
           type="checkbox"
           required
-          className="mt-1 size-4 shrink-0 accent-marca-800"
+          className="mt-1 size-4 shrink-0 accent-neon"
         />
-        <label htmlFor="politica" className="text-sm leading-relaxed text-arena-700">
+        <label htmlFor="politica" className="text-sm leading-relaxed text-hueso/75">
           Autorizo el tratamiento de mis datos personales conforme a la{" "}
           <Link
             href="/politica-de-datos"
-            className="font-medium text-marca-800 underline underline-offset-2"
+            className="font-medium text-celeste underline underline-offset-2"
           >
             política de tratamiento de datos
           </Link>{" "}
@@ -314,7 +314,7 @@ export default function FormularioLead({
       {error && (
         <p
           role="alert"
-          className="mt-5 rounded-xl border border-red-300 bg-red-50 px-4 py-3 text-sm text-red-800"
+          className="mt-5 rounded-xl border border-red-500/40 bg-red-950/40 px-4 py-3 text-sm text-red-300"
         >
           {error}
         </p>
@@ -323,13 +323,13 @@ export default function FormularioLead({
       <button
         type="submit"
         disabled={enviando}
-        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-acento-500 px-7 py-3.5 font-semibold text-arena-950 transition-colors hover:bg-acento-400 disabled:cursor-not-allowed disabled:opacity-60"
+        className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-neon px-7 py-3.5 font-semibold text-tinta transition-colors hover:bg-neon-claro disabled:cursor-not-allowed disabled:opacity-60"
       >
         <Send aria-hidden="true" className="size-5" />
         {enviando ? "Enviando…" : textoBoton}
       </button>
 
-      <p className="mt-4 text-center text-xs leading-relaxed text-arena-500">
+      <p className="mt-4 text-center text-xs leading-relaxed text-hueso/50">
         Al enviar se abre WhatsApp con el mensaje ya escrito. Revísalo y dale
         enviar: así queda la conversación en tu propio chat.
       </p>

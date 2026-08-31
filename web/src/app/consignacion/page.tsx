@@ -129,16 +129,16 @@ export default function PaginaConsignacion() {
             </div>
           </div>
 
-          <div className="rounded-card border border-acento-300 bg-acento-50 p-7">
-            <h3 className="text-lg font-bold text-acento-900">
+          <div className="rounded-card border border-neon/35 bg-neon/10 p-7">
+            <h3 className="text-lg font-bold text-neon">
               Sobre la comisión y la vigencia
             </h3>
-            <p className="mt-3 leading-relaxed text-acento-900">
+            <p className="mt-3 leading-relaxed text-hueso/85">
               La comisión y la duración del contrato se acuerdan caso por caso,
               según el precio, el tipo de vehículo y qué tan rápido se estime la
               venta. Te lo decimos por escrito antes de firmar y no cambia después.
             </p>
-            <p className="mt-4 rounded-lg bg-acento-100 px-4 py-3 text-sm font-medium text-acento-900">
+            <p className="mt-4 rounded-lg border border-neon/30 bg-neon/10 px-4 py-3 text-sm font-medium text-hueso/85">
               <strong>Pendiente de definir:</strong> los porcentajes de comisión y
               la vigencia estándar del contrato todavía no están publicados en esta
               página. Hay que fijarlos y agregarlos aquí antes de salir a producción.

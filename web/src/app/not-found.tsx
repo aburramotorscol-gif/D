@@ -22,16 +22,16 @@ export default function NoEncontrada() {
         <div className="max-w-2xl">
           <p
             aria-hidden="true"
-            className="font-[family-name:var(--font-display)] text-7xl font-bold text-acento-500/80 sm:text-8xl"
+            className="cifra text-7xl font-bold text-neon sm:text-9xl"
           >
             404
           </p>
 
-          <h1 className="mt-4 text-3xl leading-tight font-bold text-arena-50 sm:text-4xl">
+          <h1 className="mt-4 text-3xl leading-tight font-bold text-hueso sm:text-4xl">
             Esta página se nos fue del inventario
           </h1>
 
-          <p className="mt-5 text-lg leading-relaxed text-arena-300">
+          <p className="mt-5 text-lg leading-relaxed text-hueso/70">
             El enlace que seguiste no existe o el vehículo que buscabas ya se
             vendió. Si venías por un carro en particular, escríbenos: puede que
             tengamos algo parecido o lo consigamos.
@@ -55,7 +55,7 @@ export default function NoEncontrada() {
           </div>
 
           <nav aria-label="Atajos" className="mt-12">
-            <p className="text-sm font-semibold tracking-wider text-arena-400 uppercase">
+            <p className="text-sm font-semibold tracking-wider text-hueso/55 uppercase">
               O ve directo a
             </p>
             <ul className="mt-4 flex flex-wrap gap-2.5">
@@ -63,7 +63,7 @@ export default function NoEncontrada() {
                 <li key={atajo.href}>
                   <Link
                     href={atajo.href}
-                    className="inline-block rounded-full border border-marca-700 px-4 py-2 text-sm font-medium text-arena-200 transition-colors hover:border-acento-500 hover:text-acento-300"
+                    className="inline-block rounded-full border border-teal px-4 py-2 text-sm font-medium text-hueso/80 transition-colors hover:border-neon/50 hover:text-neon"
                   >
                     {atajo.texto}
                   </Link>

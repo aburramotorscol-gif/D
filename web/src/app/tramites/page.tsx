@@ -130,13 +130,13 @@ export default function PaginaTramites() {
           {TRAMITES.map((tramite) => (
             <li
               key={tramite.titulo}
-              className="rounded-card border border-arena-200 bg-white p-6"
+              className="rounded-card border border-celeste/15 bg-panel p-6"
             >
-              <h3 className="font-bold text-marca-900">{tramite.titulo}</h3>
-              <p className="mt-1 text-sm font-semibold text-acento-700">
+              <h3 className="font-bold text-hueso">{tramite.titulo}</h3>
+              <p className="mt-1 text-sm font-semibold text-neon">
                 {tramite.tiempo}
               </p>
-              <p className="mt-3 text-sm leading-relaxed text-arena-700">
+              <p className="mt-3 text-sm leading-relaxed text-hueso/75">
                 {tramite.texto}
               </p>
             </li>
@@ -157,7 +157,7 @@ export default function PaginaTramites() {
             <div className="mt-8">
               <ListaChequeo items={REQUISITOS} />
             </div>
-            <p className="mt-6 rounded-xl border border-arena-300 bg-arena-50 px-4 py-3 text-sm leading-relaxed text-arena-700">
+            <p className="mt-6 rounded-xl border border-celeste/20 bg-fondo px-4 py-3 text-sm leading-relaxed text-hueso/75">
               El costo de cada trámite depende de los impuestos y derechos de
               tránsito vigentes, que fija la autoridad, no nosotros. Te los
               desglosamos en la cotización antes de empezar.

@@ -50,11 +50,11 @@ const FILTROS_VACIOS: Filtros = {
 const OPCIONES_KM = [30_000, 50_000, 80_000, 120_000];
 
 const CLASES_CAMPO =
-  "w-full rounded-xl border border-arena-300 bg-white px-3.5 py-2.5 text-sm text-arena-900 " +
-  "focus:border-marca-600 focus:outline-none";
+  "w-full rounded-xl border border-celeste/20 bg-panel px-3.5 py-2.5 text-sm text-hueso " +
+  "focus:border-teal-claro focus:outline-none";
 
 const CLASES_ETIQUETA =
-  "mb-1.5 block text-xs font-semibold tracking-wider text-arena-600 uppercase";
+  "mb-1.5 block text-xs font-semibold tracking-wider text-hueso/60 uppercase";
 
 function escalonesDePrecio(min: number, max: number): number[] {
   const piso = Math.floor(min / 10_000_000) * 10_000_000;
@@ -273,7 +273,7 @@ export default function CatalogoCliente({
           ).map(([valor, texto]) => (
             <label
               key={valor || "todos"}
-              className="flex cursor-pointer items-center gap-2.5 text-sm text-arena-800"
+              className="flex cursor-pointer items-center gap-2.5 text-sm text-hueso/85"
             >
               <input
                 type="radio"
@@ -281,7 +281,7 @@ export default function CatalogoCliente({
                 value={valor}
                 checked={filtros.origen === valor}
                 onChange={(e) => actualizar("origen", e.target.value)}
-                className="size-4 accent-marca-800"
+                className="size-4 accent-neon"
               />
               {texto}
             </label>
@@ -293,7 +293,7 @@ export default function CatalogoCliente({
         type="button"
         onClick={() => setFiltros(FILTROS_VACIOS)}
         disabled={activos === 0}
-        className="inline-flex items-center gap-2 text-sm font-semibold text-marca-800 hover:text-marca-950 disabled:cursor-not-allowed disabled:text-arena-400"
+        className="inline-flex items-center gap-2 text-sm font-semibold text-celeste hover:text-hueso disabled:cursor-not-allowed disabled:text-hueso/55"
       >
         <RotateCcw aria-hidden="true" className="size-4" />
         Limpiar filtros
@@ -309,20 +309,20 @@ export default function CatalogoCliente({
           <button
             type="button"
             onClick={() => setPanelAbierto(true)}
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-marca-800 px-5 py-3 font-semibold text-marca-900 lg:hidden"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-teal px-5 py-3 font-semibold text-hueso lg:hidden"
             aria-expanded={panelAbierto}
           >
             <SlidersHorizontal aria-hidden="true" className="size-5" />
             Filtrar
             {activos > 0 && (
-              <span className="ml-1 grid size-6 place-items-center rounded-full bg-acento-500 text-xs text-arena-950">
+              <span className="ml-1 grid size-6 place-items-center rounded-full bg-neon text-xs text-tinta">
                 {activos}
               </span>
             )}
           </button>
 
-          <div className="hidden rounded-card border border-arena-200 bg-white p-6 lg:block">
-            <h2 className="mb-5 font-bold text-marca-900">Filtrar</h2>
+          <div className="hidden rounded-card border border-celeste/15 bg-panel p-6 lg:block">
+            <h2 className="mb-5 font-bold text-hueso">Filtrar</h2>
             {panelFiltros}
           </div>
         </div>
@@ -330,8 +330,8 @@ export default function CatalogoCliente({
         {/* Resultados */}
         <div className="mt-8 lg:mt-0">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
-            <p aria-live="polite" className="text-sm text-arena-700">
-              <strong className="font-semibold text-marca-900">
+            <p aria-live="polite" className="text-sm text-hueso/75">
+              <strong className="font-semibold text-hueso">
                 {resultados.length}
               </strong>{" "}
               {resultados.length === 1
@@ -342,7 +342,7 @@ export default function CatalogoCliente({
             <div className="flex items-center gap-2">
               <label
                 htmlFor="orden"
-                className="text-xs font-semibold tracking-wider text-arena-600 uppercase"
+                className="text-xs font-semibold tracking-wider text-hueso/60 uppercase"
               >
                 Ordenar
               </label>
@@ -350,7 +350,7 @@ export default function CatalogoCliente({
                 id="orden"
                 value={filtros.orden}
                 onChange={(e) => actualizar("orden", e.target.value as Orden)}
-                className="rounded-xl border border-arena-300 bg-white px-3.5 py-2 text-sm text-arena-900 focus:border-marca-600 focus:outline-none"
+                className="rounded-xl border border-celeste/20 bg-panel px-3.5 py-2 text-sm text-hueso focus:border-teal-claro focus:outline-none"
               >
                 <option value="recientes">Más recientes</option>
                 <option value="precio_asc">Precio: de menor a mayor</option>
@@ -368,11 +368,11 @@ export default function CatalogoCliente({
               ))}
             </ul>
           ) : (
-            <div className="rounded-card border border-dashed border-arena-300 bg-arena-100/60 px-6 py-16 text-center">
-              <h2 className="text-xl font-bold text-marca-900">
+            <div className="rounded-card border border-dashed border-celeste/20 bg-panel/70 px-6 py-16 text-center">
+              <h2 className="text-xl font-bold text-hueso">
                 Ningún vehículo cumple con esos filtros
               </h2>
-              <p className="mx-auto mt-3 max-w-md leading-relaxed text-arena-700">
+              <p className="mx-auto mt-3 max-w-md leading-relaxed text-hueso/75">
                 Prueba a ampliar el rango de precio o el año. También podemos
                 buscarte el carro que necesitas aunque no esté publicado: díganos
                 qué busca y lo conseguimos.
@@ -381,7 +381,7 @@ export default function CatalogoCliente({
                 <button
                   type="button"
                   onClick={() => setFiltros(FILTROS_VACIOS)}
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-marca-800 px-6 py-3 font-semibold text-arena-50 hover:bg-marca-900"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-teal px-6 py-3 font-semibold text-hueso hover:bg-panel"
                 >
                   <RotateCcw aria-hidden="true" className="size-4" />
                   Quitar los filtros
@@ -399,7 +399,7 @@ export default function CatalogoCliente({
       {panelAbierto && (
         <div className="fixed inset-0 z-50 lg:hidden">
           <div
-            className="absolute inset-0 bg-arena-950/50"
+            className="absolute inset-0 bg-fondo/75"
             onClick={() => setPanelAbierto(false)}
             aria-hidden="true"
           />
@@ -407,14 +407,14 @@ export default function CatalogoCliente({
             role="dialog"
             aria-modal="true"
             aria-label="Filtros del catálogo"
-            className="absolute inset-x-0 bottom-0 max-h-[85dvh] overflow-y-auto rounded-t-3xl bg-arena-50 p-6 pb-24"
+            className="absolute inset-x-0 bottom-0 max-h-[85dvh] overflow-y-auto rounded-t-3xl bg-fondo p-6 pb-24"
           >
             <div className="mb-6 flex items-center justify-between">
-              <h2 className="text-lg font-bold text-marca-900">Filtrar</h2>
+              <h2 className="text-lg font-bold text-hueso">Filtrar</h2>
               <button
                 type="button"
                 onClick={() => setPanelAbierto(false)}
-                className="grid size-10 place-items-center rounded-full hover:bg-arena-200"
+                className="grid size-10 place-items-center rounded-full hover:bg-panel-alto"
               >
                 <span className="sr-only">Cerrar los filtros</span>
                 <X aria-hidden="true" className="size-5" />
@@ -423,11 +423,11 @@ export default function CatalogoCliente({
 
             {panelFiltros}
 
-            <div className="fixed inset-x-0 bottom-0 border-t border-arena-200 bg-arena-50 p-4">
+            <div className="fixed inset-x-0 bottom-0 border-t border-celeste/15 bg-fondo p-4">
               <button
                 type="button"
                 onClick={() => setPanelAbierto(false)}
-                className="w-full rounded-full bg-marca-800 px-6 py-3.5 font-semibold text-arena-50"
+                className="w-full rounded-full bg-teal px-6 py-3.5 font-semibold text-hueso"
               >
                 Ver {resultados.length}{" "}
                 {resultados.length === 1 ? "vehículo" : "vehículos"}

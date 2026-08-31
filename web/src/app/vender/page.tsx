@@ -144,17 +144,17 @@ export default function PaginaVender() {
           {RUTAS.map(({ icono: Icono, ...ruta }) => (
             <li
               key={ruta.titulo}
-              className="flex flex-col rounded-card border border-arena-200 bg-white p-7"
+              className="flex flex-col rounded-card border border-celeste/15 bg-panel p-7"
             >
-              <span className="mb-4 grid size-11 place-items-center rounded-xl bg-marca-100 text-marca-800">
+              <span className="mb-4 grid size-11 place-items-center rounded-xl bg-teal/30 text-celeste">
                 <Icono aria-hidden="true" className="size-5" />
               </span>
-              <h3 className="text-lg font-bold text-marca-900">{ruta.titulo}</h3>
-              <p className="mt-1 text-sm font-semibold text-acento-700">
+              <h3 className="text-lg font-bold text-hueso">{ruta.titulo}</h3>
+              <p className="mt-1 text-sm font-semibold text-neon">
                 {ruta.resumen}
               </p>
-              <p className="mt-3 flex-1 leading-relaxed text-arena-700">{ruta.texto}</p>
-              <p className="mt-5 border-t border-arena-200 pt-4 text-sm text-arena-600">
+              <p className="mt-3 flex-1 leading-relaxed text-hueso/75">{ruta.texto}</p>
+              <p className="mt-5 border-t border-celeste/15 pt-4 text-sm text-hueso/60">
                 {ruta.ideal}
               </p>
             </li>
@@ -180,7 +180,7 @@ export default function PaginaVender() {
             <div className="mt-8">
               <ListaChequeo items={REQUISITOS} />
             </div>
-            <p className="mt-6 rounded-xl border border-arena-300 bg-arena-50 px-4 py-3 text-sm leading-relaxed text-arena-700">
+            <p className="mt-6 rounded-xl border border-celeste/20 bg-fondo px-4 py-3 text-sm leading-relaxed text-hueso/75">
               ¿Tu carro tiene prenda, multas pendientes o el traspaso quedó a medias?
               Escríbenos igual: eso se resuelve, solo hay que saberlo desde el
               principio para no perder tiempo.

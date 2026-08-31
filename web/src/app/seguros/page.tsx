@@ -107,7 +107,7 @@ export default function PaginaSeguros() {
             <div className="mt-8">
               <ListaPasos pasos={PASOS} />
             </div>
-            <p className="mt-8 rounded-xl border border-acento-300 bg-acento-50 px-4 py-3 text-sm leading-relaxed text-acento-900">
+            <p className="mt-8 rounded-xl border border-neon/35 bg-neon/10 px-4 py-3 text-sm leading-relaxed text-hueso/85">
               <strong>Importante:</strong> el SOAT es obligatorio por ley y no cubre
               daños a tu propio vehículo, solo lesiones a personas. Si quieres
               protección para el carro, necesitas además una póliza todo riesgo.

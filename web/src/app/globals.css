@@ -2,57 +2,52 @@
 
 /* ==========================================================================
    Aburrá Motors — sistema de diseño
-   Paleta: verde petróleo (marca) + ámbar cobre (acento) sobre neutros cálidos.
-   Deliberadamente NO usamos el azul corporativo por defecto.
+
+   Paleta de marca (los seis colores oficiales):
+     Teal oscuro   #005150  estructura
+     Celeste       #7ECAD1  secundario
+     Verde neón    #AEEA00  acento
+     Tinta         #0A1F1E  texto sobre acento
+     Blanco roto   #F4F7F6  texto principal
+     Negro         #0B0D0C  fondo
+
+   El sitio es oscuro: el logotipo en verde neón pide fondo oscuro para
+   respirar, y sobre blanco roto pierde legibilidad.
+
+   Los tonos derivados (panel-alto, teal-claro, neon-claro) existen solo para
+   estados de hover y superficies elevadas. No son colores nuevos de marca.
    ========================================================================== */
 
 @theme {
-  /* --- Marca: verde petróleo --------------------------------------- */
-  --color-marca-50: #f0f7f5;
-  --color-marca-100: #d9ece7;
-  --color-marca-200: #b3d9d0;
-  --color-marca-300: #7fbdb0;
-  --color-marca-400: #4d9c8c;
-  --color-marca-500: #2f7f70;
-  --color-marca-600: #22665a;
-  --color-marca-700: #1c5149;
-  --color-marca-800: #17413b;
-  --color-marca-900: #133531;
-  --color-marca-950: #0a1f1d;
+  /* --- Superficies ------------------------------------------------- */
+  --color-fondo: #0b0d0c; /* Negro: fondo de la página */
+  --color-panel: #0a1f1e; /* Tinta: tarjetas y bloques */
+  --color-panel-alto: #0e2a28; /* derivado: hover y superficies elevadas */
 
-  /* --- Acento: ámbar cobre ----------------------------------------- */
-  --color-acento-50: #fdf6ec;
-  --color-acento-100: #f9e7c9;
-  --color-acento-200: #f3cf93;
-  --color-acento-300: #edb45d;
-  --color-acento-400: #e89f33;
-  --color-acento-500: #d4821a;
-  --color-acento-600: #b06514;
-  --color-acento-700: #8c4d14;
-  --color-acento-800: #723f16;
-  --color-acento-900: #5f3516;
+  /* --- Estructura --------------------------------------------------- */
+  --color-teal: #005150;
+  --color-teal-claro: #086e6c; /* derivado: bordes y hover */
 
-  /* --- Neutros cálidos (arena) ------------------------------------- */
-  --color-arena-50: #faf8f5;
-  --color-arena-100: #f4f0ea;
-  --color-arena-200: #e8e1d7;
-  --color-arena-300: #d6cabb;
-  --color-arena-400: #b3a494;
-  --color-arena-500: #8d7f6f;
-  --color-arena-600: #6d6154;
-  --color-arena-700: #554b42;
-  --color-arena-800: #3a332d;
-  --color-arena-900: #262119;
-  --color-arena-950: #17130f;
+  /* --- Color -------------------------------------------------------- */
+  --color-celeste: #7ecad1;
+  --color-neon: #aeea00;
+  --color-neon-claro: #c2f52e; /* derivado: hover del acento */
 
-  /* --- Tipografía --------------------------------------------------- */
-  --font-display: var(--fuente-display), ui-sans-serif, system-ui, sans-serif;
+  /* --- Texto --------------------------------------------------------- */
+  --color-hueso: #f4f7f6; /* Blanco roto: texto principal */
+  --color-tinta: #0a1f1e; /* texto sobre el acento */
+
+  /* --- Tipografía ---------------------------------------------------- */
+  /* Oswald: titulares, mayúsculas, precios y números. Condensada. */
+  --font-display: var(--fuente-display), "Arial Narrow", ui-sans-serif, sans-serif;
+  /* Inter: cuerpo, navegación, botones y campos. */
   --font-sans: var(--fuente-sans), ui-sans-serif, system-ui, sans-serif;
 
-  /* --- Radios y sombras --------------------------------------------- */
-  --radius-card: 0.875rem;
-  --shadow-suave: 0 1px 2px rgb(38 33 25 / 0.05), 0 8px 24px -12px rgb(38 33 25 / 0.18);
-  --shadow-elevada: 0 2px 4px rgb(38 33 25 / 0.06), 0 18px 40px -18px rgb(38 33 25 / 0.28);
+  /* --- Radios y sombras ---------------------------------------------- */
+  --radius-card: 0.75rem;
+  --shadow-suave: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -12px rgb(0 0 0 / 0.6);
+  --shadow-elevada: 0 2px 6px rgb(0 0 0 / 0.45), 0 20px 44px -20px rgb(0 0 0 / 0.75);
+  --shadow-neon: 0 0 0 1px rgb(174 234 0 / 0.35), 0 8px 30px -10px rgb(174 234 0 / 0.3);
 }
 
 /* ==========================================================================
@@ -60,9 +55,7 @@
    ========================================================================== */
 
 :root {
-  --fondo: var(--color-arena-50);
-  --texto: var(--color-arena-900);
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 * {
@@ -72,6 +65,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  background-color: var(--color-fondo);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -88,19 +82,22 @@ html {
 }
 
 body {
-  background-color: var(--fondo);
-  color: var(--texto);
+  background-color: var(--color-fondo);
+  color: var(--color-hueso);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
+/* Oswald es condensada y va en titulares. */
 h1,
 h2,
 h3,
 h4 {
   font-family: var(--font-display);
-  letter-spacing: -0.02em;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  line-height: 1.08;
   text-wrap: balance;
 }
 
@@ -108,9 +105,14 @@ p {
   text-wrap: pretty;
 }
 
+::selection {
+  background-color: var(--color-neon);
+  color: var(--color-tinta);
+}
+
 /* Foco visible y consistente en todo el sitio (accesibilidad). */
 :focus-visible {
-  outline: 3px solid var(--color-acento-500);
+  outline: 3px solid var(--color-neon);
   outline-offset: 2px;
   border-radius: 4px;
 }
@@ -125,9 +127,25 @@ p {
   left: 1rem;
   top: 1rem;
   padding: 0.75rem 1.25rem;
-  background-color: var(--color-marca-900);
-  color: white;
+  background-color: var(--color-neon);
+  color: var(--color-tinta);
+  font-weight: 600;
   border-radius: 0.5rem;
+}
+
+/* Los campos de formulario usan Inter, no la condensada. */
+input,
+select,
+textarea,
+button {
+  font-family: var(--font-sans);
+}
+
+/* Las opciones de los <select> nativos heredan el fondo del sistema, que en
+   modo oscuro puede salir ilegible. Se fuerzan a la paleta. */
+select option {
+  background-color: var(--color-panel);
+  color: var(--color-hueso);
 }
 
 /* ==========================================================================
@@ -144,12 +162,57 @@ p {
   }
 }
 
-/* Textura sutil del hero: no es una imagen, no cuesta una petición. */
+/* Titulares en mayúscula con el interletrado que pide Oswald. */
+@utility titular-alto {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-weight: 700;
+}
+
+/* Cifras: precios, cuotas y numeración de pasos. Oswald con cifras de ancho
+   fijo, para que las columnas de precios queden alineadas. */
+@utility cifra {
+  font-family: var(--font-display);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+/* Etiqueta pequeña de sección: mayúscula, muy espaciada. Va en Inter. */
+@utility etiqueta-seccion {
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+/* Fondo del hero: teal profundo con un halo neón, sin coste de imagen. */
 @utility trama-marca {
+  background-color: var(--color-fondo);
   background-image:
-    radial-gradient(circle at 18% 20%, rgb(45 127 112 / 0.22), transparent 45%),
-    radial-gradient(circle at 82% 8%, rgb(232 159 51 / 0.16), transparent 42%),
-    linear-gradient(180deg, var(--color-marca-950) 0%, var(--color-marca-900) 100%);
+    radial-gradient(ellipse 70% 60% at 15% 0%, rgb(0 81 80 / 0.85), transparent 60%),
+    radial-gradient(ellipse 50% 50% at 90% 10%, rgb(174 234 0 / 0.14), transparent 55%),
+    radial-gradient(ellipse 60% 40% at 60% 100%, rgb(126 202 209 / 0.08), transparent 60%);
+}
+
+/* Línea diagonal de acento, guiño al swoosh del isotipo. */
+@utility filo-neon {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-neon) 25%,
+      var(--color-celeste) 75%,
+      transparent
+    );
+  }
 }
 
 /* Oculta la barra de scroll en carruseles horizontales de móvil. */

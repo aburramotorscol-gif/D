@@ -16,15 +16,15 @@ export default function EncabezadoPagina({
     <div className="trama-marca">
       <div className="contenedor-sitio py-14 sm:py-20">
         {etiqueta && (
-          <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-acento-300 uppercase">
+          <p className="etiqueta-seccion mb-3 text-neon">
             {etiqueta}
           </p>
         )}
-        <h1 className="max-w-3xl text-3xl leading-tight font-bold text-arena-50 sm:text-5xl">
+        <h1 className="titular-alto max-w-3xl text-4xl text-hueso sm:text-5xl lg:text-6xl">
           {titulo}
         </h1>
         {descripcion && (
-          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-arena-200">
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-hueso/80">
             {descripcion}
           </p>
         )}

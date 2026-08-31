@@ -40,24 +40,24 @@ export default function Servicios() {
             <li key={servicio.slug}>
               <Link
                 href={servicio.href}
-                className="group flex h-full flex-col rounded-card border border-arena-200 bg-white p-6 transition-all hover:-translate-y-0.5 hover:border-marca-300 hover:shadow-elevada"
+                className="group flex h-full flex-col rounded-card border border-celeste/15 bg-panel p-6 transition-all hover:-translate-y-0.5 hover:border-teal-claro hover:shadow-elevada"
               >
-                <span className="mb-4 grid size-11 place-items-center rounded-xl bg-marca-100 text-marca-800 transition-colors group-hover:bg-marca-800 group-hover:text-arena-50">
+                <span className="mb-4 grid size-11 place-items-center rounded-xl bg-teal/30 text-celeste transition-colors group-hover:bg-teal group-hover:text-hueso">
                   <Icono aria-hidden="true" className="size-5" />
                 </span>
 
-                <h3 className="flex items-start justify-between gap-2 text-lg font-bold text-marca-900">
+                <h3 className="flex items-start justify-between gap-2 text-lg font-bold text-hueso">
                   {servicio.titulo}
                   <ArrowUpRight
                     aria-hidden="true"
-                    className="size-4 shrink-0 translate-y-1 text-arena-400 transition-transform group-hover:-translate-y-0 group-hover:text-acento-600"
+                    className="size-4 shrink-0 translate-y-1 text-hueso/55 transition-transform group-hover:-translate-y-0 group-hover:text-neon"
                   />
                 </h3>
 
-                <p className="mt-2 text-sm font-medium text-acento-700">
+                <p className="mt-2 text-sm font-medium text-neon">
                   {servicio.resumen}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-arena-600">
+                <p className="mt-3 text-sm leading-relaxed text-hueso/60">
                   {servicio.descripcion}
                 </p>
               </Link>

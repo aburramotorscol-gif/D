@@ -43,7 +43,7 @@ export default function Testimonios() {
 
       <p
         role="note"
-        className="mt-6 rounded-xl border border-acento-300 bg-acento-50 px-4 py-3 text-sm font-medium text-acento-900"
+        className="mt-6 rounded-xl border border-neon/35 bg-neon/10 px-4 py-3 text-sm leading-relaxed font-medium text-hueso/85"
       >
         <strong>Contenido de ejemplo.</strong> Estos testimonios son
         marcadores de posición y no corresponden a clientes reales. Antes de
@@ -55,18 +55,18 @@ export default function Testimonios() {
         {TESTIMONIOS.map((testimonio, indice) => (
           <li
             key={indice}
-            className="flex flex-col rounded-card border border-arena-200 bg-arena-100/60 p-6"
+            className="flex flex-col rounded-card border border-celeste/15 bg-panel/70 p-6"
           >
             <Quote
               aria-hidden="true"
-              className="size-7 shrink-0 text-acento-500/60"
+              className="size-7 shrink-0 text-neon/60"
             />
-            <blockquote className="mt-4 flex-1 leading-relaxed text-arena-800">
+            <blockquote className="mt-4 flex-1 leading-relaxed text-hueso/85">
               {testimonio.texto}
             </blockquote>
-            <footer className="mt-5 border-t border-arena-300 pt-4">
-              <p className="font-semibold text-marca-900">{testimonio.autor}</p>
-              <p className="text-sm text-arena-600">{testimonio.detalle}</p>
+            <footer className="mt-5 border-t border-celeste/20 pt-4">
+              <p className="font-semibold text-hueso">{testimonio.autor}</p>
+              <p className="text-sm text-hueso/60">{testimonio.detalle}</p>
             </footer>
           </li>
         ))}

@@ -9,17 +9,17 @@ export default function AvisoLegal() {
   return (
     <div
       role="note"
-      className="flex gap-4 rounded-card border-2 border-acento-400 bg-acento-50 p-5"
+      className="flex gap-4 rounded-card border-2 border-neon/40 bg-neon/10 p-5"
     >
       <AlertTriangle
         aria-hidden="true"
-        className="mt-0.5 size-6 shrink-0 text-acento-700"
+        className="mt-0.5 size-6 shrink-0 text-neon"
       />
       <div>
-        <p className="font-bold text-acento-900">
+        <p className="font-bold text-neon">
           Documento pendiente de revisión legal
         </p>
-        <p className="mt-2 leading-relaxed text-acento-900">
+        <p className="mt-2 leading-relaxed text-hueso/85">
           Este texto es un borrador de referencia redactado para dar estructura al
           sitio. <strong>No sustituye el concepto de un abogado.</strong> Antes de
           publicar, debe ser revisado y aprobado por un profesional del derecho en

@@ -48,19 +48,19 @@ export default function Preguntas() {
         descripcion="Si tu duda no está aquí, escríbenos por WhatsApp: contestamos el mismo día."
       />
 
-      <div className="mt-10 max-w-3xl divide-y divide-arena-300 border-y border-arena-300">
+      <div className="mt-10 max-w-3xl divide-y divide-celeste/15 border-y border-celeste/20">
         {PREGUNTAS.map((item) => (
           <details key={item.pregunta} className="group py-1">
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left font-semibold text-marca-900 marker:content-none">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 text-left font-semibold text-hueso marker:content-none">
               {item.pregunta}
               <span
                 aria-hidden="true"
-                className="grid size-7 shrink-0 place-items-center rounded-full border border-arena-400 text-arena-600 transition-transform group-open:rotate-45"
+                className="grid size-7 shrink-0 place-items-center rounded-full border border-celeste/30 text-hueso/60 transition-transform group-open:rotate-45"
               >
                 +
               </span>
             </summary>
-            <p className="pb-5 leading-relaxed text-arena-700">{item.respuesta}</p>
+            <p className="pb-5 leading-relaxed text-hueso/75">{item.respuesta}</p>
           </details>
         ))}
       </div>

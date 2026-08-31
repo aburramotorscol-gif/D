@@ -14,12 +14,14 @@ const BASE =
   "transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-55";
 
 const VARIANTES: Record<Variante, string> = {
-  primario: "bg-marca-800 text-arena-50 hover:bg-marca-900",
-  acento: "bg-acento-500 text-arena-950 hover:bg-acento-400",
+  // El acento neón es la llamada a la acción principal del sitio.
+  acento: "bg-neon text-tinta hover:bg-neon-claro",
+  // Teal: acción secundaria, la estructura de la marca.
+  primario: "bg-teal text-hueso hover:bg-teal-claro",
   contorno:
-    "border-2 border-marca-800 text-marca-900 hover:bg-marca-800 hover:text-arena-50",
-  fantasma: "text-marca-900 hover:bg-marca-100",
-  claro: "bg-arena-50 text-marca-900 hover:bg-arena-200",
+    "border-2 border-celeste/50 text-celeste hover:border-celeste hover:bg-celeste hover:text-tinta",
+  fantasma: "text-celeste hover:bg-panel-alto",
+  claro: "bg-hueso text-tinta hover:bg-celeste",
 };
 
 const TAMANOS: Record<Tamano, string> = {

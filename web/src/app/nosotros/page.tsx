@@ -53,7 +53,7 @@ export default function PaginaNosotros() {
         <div className="grid gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
           <div>
             <TituloSeccion etiqueta="Quiénes somos" titulo="Sin vitrina, con respaldo" />
-            <div className="mt-6 space-y-5 leading-relaxed text-arena-700">
+            <div className="mt-6 space-y-5 leading-relaxed text-hueso/75">
               <p>
                 {siteConfig.nombre} es una compraventa automotriz que opera 100 %
                 en línea en {siteConfig.ciudad} y todo el {siteConfig.region}. No
@@ -91,12 +91,12 @@ export default function PaginaNosotros() {
             <ul className="mt-8 space-y-6">
               {PRINCIPIOS.map(({ icono: Icono, ...principio }) => (
                 <li key={principio.titulo} className="flex gap-4">
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-marca-100 text-marca-800">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-teal/30 text-celeste">
                     <Icono aria-hidden="true" className="size-5" />
                   </span>
                   <div>
-                    <h3 className="font-bold text-marca-900">{principio.titulo}</h3>
-                    <p className="mt-1.5 leading-relaxed text-arena-700">
+                    <h3 className="font-bold text-hueso">{principio.titulo}</h3>
+                    <p className="mt-1.5 leading-relaxed text-hueso/75">
                       {principio.texto}
                     </p>
                   </div>
@@ -117,13 +117,13 @@ export default function PaginaNosotros() {
           {siteConfig.cobertura.map((municipio) => (
             <li
               key={municipio}
-              className="rounded-full border border-arena-300 bg-arena-50 px-4 py-2 text-sm font-medium text-arena-800"
+              className="rounded-full border border-celeste/20 bg-fondo px-4 py-2 text-sm font-medium text-hueso/85"
             >
               {municipio}
             </li>
           ))}
         </ul>
-        <p className="mt-6 text-sm text-arena-600">
+        <p className="mt-6 text-sm text-hueso/60">
           ¿Estás en otro municipio de Antioquia? Escríbenos y lo evaluamos caso por
           caso.
         </p>

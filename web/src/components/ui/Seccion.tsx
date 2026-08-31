@@ -3,13 +3,20 @@ import type { ReactNode } from "react";
 /**
  * Contenedor de sección con el ritmo vertical del sitio. Evita que cada
  * página invente su propio espaciado.
+ *
+ * El sitio es oscuro: los fondos alternan entre el negro de página y el panel
+ * en tinta, con el teal reservado para bloques de estructura.
  */
 
 const FONDOS = {
-  claro: "bg-arena-50",
-  crema: "bg-arena-100",
-  oscuro: "bg-marca-900 text-arena-50",
-  marca: "trama-marca text-arena-50",
+  /** Negro de página. El fondo por defecto. */
+  claro: "bg-fondo",
+  /** Panel en tinta: alterna con el negro para separar secciones. */
+  crema: "bg-panel",
+  /** Teal sólido: bloques de estructura, como "cómo funciona". */
+  oscuro: "bloque-teal",
+  /** Degradado de marca, para los bloques de mayor peso. */
+  marca: "trama-marca",
 } as const;
 
 interface Props {
@@ -44,44 +51,30 @@ interface PropsTitulo {
   descripcion?: string;
   /** Centra el bloque. Por defecto va alineado a la izquierda. */
   centrado?: boolean;
+  /** Se conserva por compatibilidad: en el tema oscuro el texto ya es claro. */
   claro?: boolean;
-  /** Nivel semántico del encabezado. La home usa h2; las páginas internas h2 también. */
+  /** Nivel semántico del encabezado. */
   como?: "h1" | "h2";
 }
 
-/** Encabezado de sección: etiqueta pequeña, título y bajada. */
+/** Encabezado de sección: etiqueta pequeña, título en Oswald y bajada. */
 export function TituloSeccion({
   etiqueta,
   titulo,
   descripcion,
   centrado = false,
-  claro = false,
   como: Como = "h2",
 }: PropsTitulo) {
   return (
     <div className={`max-w-2xl ${centrado ? "mx-auto text-center" : ""}`}>
       {etiqueta && (
-        <p
-          className={`mb-3 text-xs font-semibold tracking-[0.18em] uppercase ${
-            claro ? "text-acento-300" : "text-acento-700"
-          }`}
-        >
-          {etiqueta}
-        </p>
+        <p className="etiqueta-seccion mb-3 text-neon">{etiqueta}</p>
       )}
-      <Como
-        className={`text-3xl leading-tight font-bold sm:text-4xl ${
-          claro ? "text-arena-50" : "text-marca-900"
-        }`}
-      >
+      <Como className="titular-alto text-3xl text-hueso sm:text-4xl lg:text-[2.75rem]">
         {titulo}
       </Como>
       {descripcion && (
-        <p
-          className={`mt-4 text-base leading-relaxed sm:text-lg ${
-            claro ? "text-arena-200" : "text-arena-700"
-          }`}
-        >
+        <p className="mt-4 text-base leading-relaxed text-hueso/70 sm:text-lg">
           {descripcion}
         </p>
       )}

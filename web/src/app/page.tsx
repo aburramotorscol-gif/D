@@ -56,7 +56,7 @@ export default async function PaginaInicio() {
           />
           <Link
             href="/vehiculos"
-            className="inline-flex items-center gap-2 rounded-full border-2 border-marca-800 px-5 py-2.5 text-sm font-semibold text-marca-900 transition-colors hover:bg-marca-800 hover:text-arena-50"
+            className="inline-flex items-center gap-2 rounded-full border-2 border-teal px-5 py-2.5 text-sm font-semibold text-hueso transition-colors hover:bg-teal hover:text-hueso"
           >
             Ver los {todos.length} vehículos
             <ArrowRight aria-hidden="true" className="size-4" />

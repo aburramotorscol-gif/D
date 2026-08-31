@@ -36,16 +36,16 @@ export default function ComoFunciona() {
         {PASOS.map((paso) => (
           <li
             key={paso.numero}
-            className="relative rounded-card border border-marca-800 bg-marca-950/40 p-7"
+            className="relative rounded-card border border-teal bg-fondo/40 p-7"
           >
             <span
               aria-hidden="true"
-              className="font-[family-name:var(--font-display)] text-4xl font-bold text-acento-500/70"
+              className="cifra text-5xl font-bold text-neon/80"
             >
               {paso.numero}
             </span>
-            <h3 className="mt-3 text-xl font-bold text-arena-50">{paso.titulo}</h3>
-            <p className="mt-3 leading-relaxed text-arena-300">{paso.texto}</p>
+            <h3 className="mt-3 text-xl font-bold text-hueso">{paso.titulo}</h3>
+            <p className="mt-3 leading-relaxed text-hueso/70">{paso.texto}</p>
           </li>
         ))}
       </ol>

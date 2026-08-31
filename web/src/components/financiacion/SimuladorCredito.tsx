@@ -25,10 +25,10 @@ interface Props {
 }
 
 const CLASES_CAMPO =
-  "w-full rounded-xl border border-arena-300 bg-white px-4 py-3 text-arena-900 " +
-  "focus:border-marca-600 focus:outline-none";
+  "w-full rounded-xl border border-celeste/20 bg-panel px-4 py-3 text-hueso " +
+  "focus:border-teal-claro focus:outline-none";
 
-const CLASES_ETIQUETA = "mb-2 block text-sm font-semibold text-arena-800";
+const CLASES_ETIQUETA = "mb-2 block text-sm font-semibold text-hueso/85";
 
 const PRECIO_POR_DEFECTO = 60_000_000;
 
@@ -96,15 +96,15 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
   return (
     <div className="grid gap-8 lg:grid-cols-[1fr_23rem] lg:items-start">
       {/* Controles */}
-      <div className="rounded-card border border-arena-200 bg-white p-6 sm:p-8">
-        <h2 className="text-xl font-bold text-marca-900">Arma tu crédito</h2>
+      <div className="rounded-card border border-celeste/15 bg-panel p-6 sm:p-8">
+        <h2 className="text-xl font-bold text-hueso">Arma tu crédito</h2>
 
         <div className="mt-6 space-y-6">
           {vehiculos.length > 0 && (
             <div>
               <label htmlFor="sim-vehiculo" className={CLASES_ETIQUETA}>
                 Vehículo del catálogo{" "}
-                <span className="font-normal text-arena-500">(opcional)</span>
+                <span className="font-normal text-hueso/50">(opcional)</span>
               </label>
               <select
                 id="sim-vehiculo"
@@ -136,7 +136,7 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
               onChange={(e) => setPrecio(Math.max(5_000_000, Number(e.target.value) || 0))}
               className={CLASES_CAMPO}
             />
-            <p className="mt-1.5 text-sm text-arena-600">{formatearPesos(precio)}</p>
+            <p className="mt-1.5 text-sm text-hueso/60">{formatearPesos(precio)}</p>
           </div>
 
           <div>
@@ -151,17 +151,17 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
               step={500_000}
               value={inicialValida}
               onChange={(e) => setCuotaInicial(Number(e.target.value))}
-              className="w-full accent-marca-800"
+              className="w-full accent-neon"
               aria-describedby="sim-inicial-valor"
             />
             <p
               id="sim-inicial-valor"
               className="mt-1.5 flex items-baseline justify-between text-sm"
             >
-              <span className="font-semibold text-arena-900">
+              <span className="font-semibold text-hueso">
                 {formatearPesos(inicialValida)}
               </span>
-              <span className="text-arena-600">
+              <span className="text-hueso/60">
                 {Math.round((inicialValida / precio) * 100)} % del precio
               </span>
             </p>
@@ -179,10 +179,10 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
               step={12}
               value={plazo}
               onChange={(e) => setPlazo(Number(e.target.value))}
-              className="w-full accent-marca-800"
+              className="w-full accent-neon"
               aria-describedby="sim-plazo-valor"
             />
-            <p id="sim-plazo-valor" className="mt-1.5 text-sm font-semibold text-arena-900">
+            <p id="sim-plazo-valor" className="mt-1.5 text-sm font-semibold text-hueso">
               {plazo} meses ({Math.round((plazo / 12) * 10) / 10} años)
             </p>
           </div>
@@ -199,12 +199,12 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
               step={0.05}
               value={tasa}
               onChange={(e) => setTasa(Number(e.target.value))}
-              className="w-full accent-marca-800"
+              className="w-full accent-neon"
               aria-describedby="sim-tasa-valor"
             />
-            <p id="sim-tasa-valor" className="mt-1.5 text-sm text-arena-900">
+            <p id="sim-tasa-valor" className="mt-1.5 text-sm text-hueso">
               <span className="font-semibold">{formatearPorcentaje(tasa)} mensual</span>
-              <span className="text-arena-600">
+              <span className="text-hueso/60">
                 {" "}
                 · {formatearPorcentaje(resultado.tasaEfectivaAnual, 1)} efectivo anual
               </span>
@@ -216,32 +216,32 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
       {/* Resultado */}
       <div className="lg:sticky lg:top-24">
         <div className="trama-marca rounded-card p-6 sm:p-7">
-          <p className="text-sm font-semibold tracking-wider text-acento-300 uppercase">
+          <p className="text-sm font-semibold tracking-wider text-neon uppercase">
             Cuota mensual estimada
           </p>
           <p
             aria-live="polite"
-            className="mt-2 text-4xl font-bold text-arena-50 sm:text-[2.75rem]"
+            className="cifra mt-2 text-[2.75rem] leading-none font-bold text-neon sm:text-5xl"
           >
             {formatearPesos(resultado.cuotaMensual)}
           </p>
 
-          <dl className="mt-6 space-y-3 border-t border-marca-800 pt-5 text-sm">
+          <dl className="mt-6 space-y-3 border-t border-teal pt-5 text-sm">
             <div className="flex items-baseline justify-between gap-4">
-              <dt className="text-arena-400">Monto financiado</dt>
-              <dd className="font-semibold text-arena-100">
+              <dt className="text-hueso/55">Monto financiado</dt>
+              <dd className="font-semibold text-hueso/90">
                 {formatearPesos(resultado.montoFinanciado)}
               </dd>
             </div>
             <div className="flex items-baseline justify-between gap-4">
-              <dt className="text-arena-400">Total a pagar</dt>
-              <dd className="font-semibold text-arena-100">
+              <dt className="text-hueso/55">Total a pagar</dt>
+              <dd className="font-semibold text-hueso/90">
                 {formatearPesos(resultado.totalAPagar)}
               </dd>
             </div>
             <div className="flex items-baseline justify-between gap-4">
-              <dt className="text-arena-400">Total intereses</dt>
-              <dd className="font-semibold text-acento-300">
+              <dt className="text-hueso/55">Total intereses</dt>
+              <dd className="font-semibold text-neon">
                 {formatearPesos(resultado.totalIntereses)}
               </dd>
             </div>
@@ -251,19 +251,19 @@ export default function SimuladorCredito({ vehiculos, slugInicial }: Props) {
             href={construirEnlaceWhatsApp(mensaje)}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-acento-500 px-6 py-3.5 font-semibold text-arena-950 transition-colors hover:bg-acento-400"
+            className="mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-neon px-6 py-3.5 font-semibold text-tinta transition-colors hover:bg-neon-claro"
           >
             <MessageCircle aria-hidden="true" className="size-5" />
             Enviar esta simulación
           </a>
         </div>
 
-        <div className="mt-4 flex gap-3 rounded-card border border-acento-300 bg-acento-50 p-4">
+        <div className="mt-4 flex gap-3 rounded-card border border-neon/35 bg-neon/10 p-4">
           <AlertTriangle
             aria-hidden="true"
-            className="mt-0.5 size-5 shrink-0 text-acento-700"
+            className="mt-0.5 size-5 shrink-0 text-neon"
           />
-          <p className="text-sm leading-relaxed text-acento-900">
+          <p className="text-sm leading-relaxed text-hueso/85">
             <strong>Esto es un estimado, no una aprobación de crédito.</strong> La
             cuota real depende del estudio que haga la entidad financiera según tu
             perfil, y puede incluir seguros y costos de administración no

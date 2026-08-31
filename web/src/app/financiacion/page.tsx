@@ -117,7 +117,7 @@ export default async function PaginaFinanciacion() {
           {/* Lee ?vehiculo= de la URL, así que necesita límite de Suspense. */}
           <Suspense
             fallback={
-              <p className="text-arena-600">Cargando el simulador…</p>
+              <p className="text-hueso/60">Cargando el simulador…</p>
             }
           >
             <SimuladorConParametros vehiculos={resumen} />
@@ -139,7 +139,7 @@ export default async function PaginaFinanciacion() {
             <div className="mt-8">
               <ListaChequeo items={REQUISITOS} />
             </div>
-            <p className="mt-6 rounded-xl border border-arena-300 bg-arena-50 px-4 py-3 text-sm leading-relaxed text-arena-700">
+            <p className="mt-6 rounded-xl border border-celeste/20 bg-fondo px-4 py-3 text-sm leading-relaxed text-hueso/75">
               Los requisitos varían según la entidad. Si eres independiente,
               pensionado o tienes reportes en centrales de riesgo, escríbenos igual:
               trabajamos con entidades que estudian esos perfiles.

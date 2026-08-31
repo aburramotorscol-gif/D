@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: { canonical: "/terminos" },
 };
 
-const H2 = "mt-10 text-xl font-bold text-marca-900 sm:text-2xl";
-const P = "mt-4 leading-relaxed text-arena-700";
-const UL = "mt-4 list-disc space-y-2 pl-6 leading-relaxed text-arena-700";
+const H2 = "mt-10 text-xl font-bold text-hueso sm:text-2xl";
+const P = "mt-4 leading-relaxed text-hueso/75";
+const UL = "mt-4 list-disc space-y-2 pl-6 leading-relaxed text-hueso/75";
 
 export default function PaginaTerminos() {
   return (
@@ -28,7 +28,7 @@ export default function PaginaTerminos() {
         <div className="max-w-3xl">
           <AvisoLegal />
 
-          <p className="mt-8 text-sm text-arena-600">
+          <p className="mt-8 text-sm text-hueso/60">
             Última actualización: pendiente de definir al aprobar el documento.
           </p>
 

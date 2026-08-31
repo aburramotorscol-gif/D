@@ -20,7 +20,7 @@ export default function GaleriaVehiculo({ imagenes }: { imagenes: Imagen[] }) {
 
   return (
     <div>
-      <div className="relative aspect-3/2 overflow-hidden rounded-card bg-arena-200">
+      <div className="relative aspect-3/2 overflow-hidden rounded-card bg-panel-alto">
         <Image
           src={rutaPublica(actual.src)}
           alt={actual.alt}
@@ -35,7 +35,7 @@ export default function GaleriaVehiculo({ imagenes }: { imagenes: Imagen[] }) {
             <button
               type="button"
               onClick={() => ir(-1)}
-              className="absolute top-1/2 left-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-arena-50/90 text-marca-900 shadow-suave transition-colors hover:bg-arena-50"
+              className="absolute top-1/2 left-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-fondo/90 text-hueso shadow-suave transition-colors hover:bg-fondo"
             >
               <span className="sr-only">Imagen anterior</span>
               <ChevronLeft aria-hidden="true" className="size-5" />
@@ -43,13 +43,13 @@ export default function GaleriaVehiculo({ imagenes }: { imagenes: Imagen[] }) {
             <button
               type="button"
               onClick={() => ir(1)}
-              className="absolute top-1/2 right-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-arena-50/90 text-marca-900 shadow-suave transition-colors hover:bg-arena-50"
+              className="absolute top-1/2 right-3 grid size-11 -translate-y-1/2 place-items-center rounded-full bg-fondo/90 text-hueso shadow-suave transition-colors hover:bg-fondo"
             >
               <span className="sr-only">Imagen siguiente</span>
               <ChevronRight aria-hidden="true" className="size-5" />
             </button>
 
-            <p className="absolute right-3 bottom-3 rounded-full bg-arena-950/70 px-3 py-1 text-xs font-medium text-arena-50">
+            <p className="absolute right-3 bottom-3 rounded-full bg-fondo/85 px-3 py-1 text-xs font-medium text-hueso">
               {indice + 1} / {total}
             </p>
           </>
@@ -66,8 +66,8 @@ export default function GaleriaVehiculo({ imagenes }: { imagenes: Imagen[] }) {
                 aria-current={i === indice ? "true" : undefined}
                 className={`relative block aspect-3/2 w-24 overflow-hidden rounded-lg border-2 transition-colors sm:w-28 ${
                   i === indice
-                    ? "border-marca-800"
-                    : "border-transparent hover:border-arena-400"
+                    ? "border-teal"
+                    : "border-transparent hover:border-celeste/30"
                 }`}
               >
                 <span className="sr-only">Ver {imagen.alt}</span>

@@ -27,16 +27,16 @@ export default function Hero({
     <section className="trama-marca relative overflow-hidden">
       <div className="contenedor-sitio pt-14 pb-16 sm:pt-20 sm:pb-24">
         <div className="max-w-3xl">
-          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-marca-700 bg-marca-950/40 px-3.5 py-1.5 text-xs font-semibold tracking-[0.14em] text-acento-300 uppercase">
+          <p className="mb-4 inline-flex items-center gap-2 rounded-full border border-teal bg-fondo/40 px-3.5 py-1.5 text-xs font-semibold tracking-[0.14em] text-neon uppercase">
             {siteConfig.region} · 100 % online
           </p>
 
-          <h1 className="text-4xl leading-[1.08] font-bold text-arena-50 sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl leading-[1.08] font-bold text-hueso sm:text-5xl lg:text-6xl">
             Compra, vende y financia tu vehículo{" "}
-            <span className="text-acento-400">sin salir de casa</span>
+            <span className="text-neon">sin salir de casa</span>
           </h1>
 
-          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-arena-200 sm:text-xl">
+          <p className="mt-6 max-w-2xl text-lg leading-relaxed text-hueso/80 sm:text-xl">
             Somos una compraventa 100 % virtual. Hacemos el avalúo, la
             financiación, el seguro y los trámites por ti, y te entregamos el carro
             donde estés en el {siteConfig.region}.
@@ -56,9 +56,9 @@ export default function Hero({
             {GARANTIAS.map(({ icono: Icono, texto }) => (
               <li
                 key={texto}
-                className="flex items-center gap-2.5 text-sm text-arena-300"
+                className="flex items-center gap-2.5 text-sm text-hueso/70"
               >
-                <Icono aria-hidden="true" className="size-5 shrink-0 text-acento-400" />
+                <Icono aria-hidden="true" className="size-5 shrink-0 text-neon" />
                 {texto}
               </li>
             ))}

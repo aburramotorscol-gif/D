@@ -41,12 +41,12 @@ export default async function PaginaCatalogo() {
         ])}
       />
 
-      <div className="border-b border-arena-200 bg-arena-100">
+      <div className="border-b border-celeste/15 bg-panel">
         <div className="contenedor-sitio py-10 sm:py-14">
-          <h1 className="text-3xl font-bold text-marca-900 sm:text-4xl">
+          <h1 className="text-3xl font-bold text-hueso sm:text-4xl">
             Catálogo de vehículos
           </h1>
-          <p className="mt-3 max-w-2xl leading-relaxed text-arena-700">
+          <p className="mt-3 max-w-2xl leading-relaxed text-hueso/75">
             {vehiculos.length} vehículos disponibles entre inventario propio y
             consignación, todos con papeles verificados. Cada ficha te dice de quién
             es el carro y cuánto te quedaría la cuota.
@@ -58,7 +58,7 @@ export default async function PaginaCatalogo() {
       <Suspense
         fallback={
           <div className="contenedor-sitio py-16">
-            <p className="text-arena-600">Cargando el catálogo…</p>
+            <p className="text-hueso/60">Cargando el catálogo…</p>
           </div>
         }
       >

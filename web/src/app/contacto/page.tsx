@@ -53,17 +53,17 @@ export default function PaginaContacto() {
                   href={enlaceWhatsAppDirecto("quiero información.")}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex gap-4 rounded-card border border-arena-200 bg-white p-5 transition-colors hover:border-marca-300"
+                  className="group flex gap-4 rounded-card border border-celeste/15 bg-panel p-5 transition-colors hover:border-teal-claro"
                 >
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-marca-100 text-marca-800 transition-colors group-hover:bg-marca-800 group-hover:text-arena-50">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-teal/30 text-celeste transition-colors group-hover:bg-teal group-hover:text-hueso">
                     <MessageCircle aria-hidden="true" className="size-5" />
                   </span>
                   <div>
-                    <h3 className="font-bold text-marca-900">WhatsApp</h3>
-                    <p className="mt-1 text-arena-700">
+                    <h3 className="font-bold text-hueso">WhatsApp</h3>
+                    <p className="mt-1 text-hueso/75">
                       {siteConfig.whatsappVisible}
                     </p>
-                    <p className="mt-1 text-sm text-arena-600">
+                    <p className="mt-1 text-sm text-hueso/60">
                       El canal más rápido. Se abre en una pestaña nueva.
                     </p>
                   </div>
@@ -73,28 +73,28 @@ export default function PaginaContacto() {
               <li>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="group flex gap-4 rounded-card border border-arena-200 bg-white p-5 transition-colors hover:border-marca-300"
+                  className="group flex gap-4 rounded-card border border-celeste/15 bg-panel p-5 transition-colors hover:border-teal-claro"
                 >
-                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-marca-100 text-marca-800 transition-colors group-hover:bg-marca-800 group-hover:text-arena-50">
+                  <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-teal/30 text-celeste transition-colors group-hover:bg-teal group-hover:text-hueso">
                     <Mail aria-hidden="true" className="size-5" />
                   </span>
                   <div>
-                    <h3 className="font-bold text-marca-900">Correo</h3>
-                    <p className="mt-1 break-all text-arena-700">{siteConfig.email}</p>
-                    <p className="mt-1 text-sm text-arena-600">
+                    <h3 className="font-bold text-hueso">Correo</h3>
+                    <p className="mt-1 break-all text-hueso/75">{siteConfig.email}</p>
+                    <p className="mt-1 text-sm text-hueso/60">
                       Para documentos y temas que necesiten constancia escrita.
                     </p>
                   </div>
                 </a>
               </li>
 
-              <li className="flex gap-4 rounded-card border border-arena-200 bg-arena-100/60 p-5">
-                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-arena-200 text-arena-700">
+              <li className="flex gap-4 rounded-card border border-celeste/15 bg-panel/70 p-5">
+                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-panel-alto text-hueso/75">
                   <MapPin aria-hidden="true" className="size-5" />
                 </span>
                 <div>
-                  <h3 className="font-bold text-marca-900">Dónde estamos</h3>
-                  <p className="mt-1 leading-relaxed text-arena-700">
+                  <h3 className="font-bold text-hueso">Dónde estamos</h3>
+                  <p className="mt-1 leading-relaxed text-hueso/75">
                     Operamos 100 % en línea, sin vitrina física. Cubrimos{" "}
                     {siteConfig.ciudad} y todo el {siteConfig.region},{" "}
                     {siteConfig.departamento}.
@@ -102,16 +102,16 @@ export default function PaginaContacto() {
                 </div>
               </li>
 
-              <li className="flex gap-4 rounded-card border border-arena-200 bg-arena-100/60 p-5">
-                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-arena-200 text-arena-700">
+              <li className="flex gap-4 rounded-card border border-celeste/15 bg-panel/70 p-5">
+                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-panel-alto text-hueso/75">
                   <Clock aria-hidden="true" className="size-5" />
                 </span>
                 <div>
-                  <h3 className="font-bold text-marca-900">Horario de atención</h3>
-                  <p className="mt-1 leading-relaxed text-arena-700">
+                  <h3 className="font-bold text-hueso">Horario de atención</h3>
+                  <p className="mt-1 leading-relaxed text-hueso/75">
                     {siteConfig.horarios.texto}
                   </p>
-                  <p className="mt-1 text-sm text-arena-600">
+                  <p className="mt-1 text-sm text-hueso/60">
                     Fuera de horario puedes escribirnos igual: contestamos apenas
                     abrimos.
                   </p>

@@ -21,11 +21,11 @@ interface Props {
 }
 
 const CLASES_CAMPO =
-  "w-full rounded-xl border border-marca-700 bg-marca-950/60 px-4 py-3 text-arena-100 " +
-  "focus:border-acento-500 focus:outline-none";
+  "w-full rounded-xl border border-teal bg-fondo/60 px-4 py-3 text-hueso/90 " +
+  "focus:border-neon/50 focus:outline-none";
 
 const CLASES_ETIQUETA =
-  "mb-1.5 block text-xs font-semibold tracking-wider text-arena-400 uppercase";
+  "mb-1.5 block text-xs font-semibold tracking-wider text-hueso/55 uppercase";
 
 /** Escalones de precio en millones, calculados sobre el inventario real. */
 function escalonesDePrecio(max: number): number[] {
@@ -69,12 +69,12 @@ export default function BusquedaRapida({
   return (
     <form
       onSubmit={buscar}
-      className="rounded-card border border-marca-700 bg-marca-950/50 p-5 backdrop-blur sm:p-6"
+      className="rounded-card border border-teal bg-fondo/50 p-5 backdrop-blur sm:p-6"
       aria-labelledby="titulo-busqueda-rapida"
     >
       <h2
         id="titulo-busqueda-rapida"
-        className="mb-5 text-sm font-semibold text-arena-200"
+        className="mb-5 text-sm font-semibold text-hueso/80"
       >
         Busca entre nuestros {totalVehiculos} vehículos disponibles
       </h2>
@@ -140,7 +140,7 @@ export default function BusquedaRapida({
         <div className="flex items-end">
           <button
             type="submit"
-            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-acento-500 px-6 py-3 font-semibold text-arena-950 transition-colors hover:bg-acento-400 lg:w-auto"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-neon px-6 py-3 font-semibold text-tinta transition-colors hover:bg-neon-claro lg:w-auto"
           >
             <Search aria-hidden="true" className="size-5" />
             Buscar

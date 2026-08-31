@@ -123,20 +123,20 @@ export default async function PaginaDetalleVehiculo({
 
       <div className="contenedor-sitio py-6">
         <nav aria-label="Ruta de navegación">
-          <ol className="flex flex-wrap items-center gap-1 text-sm text-arena-600">
+          <ol className="flex flex-wrap items-center gap-1 text-sm text-hueso/60">
             <li>
-              <Link href="/" className="hover:text-marca-800">
+              <Link href="/" className="hover:text-celeste">
                 Inicio
               </Link>
             </li>
-            <ChevronRight aria-hidden="true" className="size-4 text-arena-400" />
+            <ChevronRight aria-hidden="true" className="size-4 text-hueso/55" />
             <li>
-              <Link href="/vehiculos" className="hover:text-marca-800">
+              <Link href="/vehiculos" className="hover:text-celeste">
                 Vehículos
               </Link>
             </li>
-            <ChevronRight aria-hidden="true" className="size-4 text-arena-400" />
-            <li aria-current="page" className="font-medium text-arena-800">
+            <ChevronRight aria-hidden="true" className="size-4 text-hueso/55" />
+            <li aria-current="page" className="font-medium text-hueso/85">
               {titulo}
             </li>
           </ol>
@@ -160,47 +160,47 @@ export default async function PaginaDetalleVehiculo({
               </Insignia>
             </div>
 
-            <h1 className="mt-4 text-3xl leading-tight font-bold text-marca-900 sm:text-4xl">
+            <h1 className="mt-4 text-3xl leading-tight font-bold text-hueso sm:text-4xl">
               {titulo}
             </h1>
-            <p className="mt-2 text-lg text-arena-600">
+            <p className="mt-2 text-lg text-hueso/60">
               {vehiculo.version} · {vehiculo.anio}
             </p>
 
-            <div className="mt-6 rounded-card border border-arena-200 bg-white p-6">
-              <p className="text-4xl font-bold text-marca-900">
+            <div className="mt-6 rounded-card border border-celeste/15 bg-panel p-6">
+              <p className="cifra text-4xl font-bold text-hueso">
                 {formatearPesos(vehiculo.precio)}
               </p>
 
-              <dl className="mt-5 space-y-2 border-t border-arena-200 pt-5 text-sm">
+              <dl className="mt-5 space-y-2 border-t border-celeste/15 pt-5 text-sm">
                 <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-arena-600">Cuota mensual estimada</dt>
-                  <dd className="text-lg font-bold text-acento-700">
+                  <dt className="text-hueso/60">Cuota mensual estimada</dt>
+                  <dd className="cifra text-lg font-bold text-neon">
                     {formatearPesos(cuota)}
                   </dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-arena-600">Con cuota inicial de</dt>
-                  <dd className="font-medium text-arena-800">
+                  <dt className="text-hueso/60">Con cuota inicial de</dt>
+                  <dd className="font-medium text-hueso/85">
                     {formatearPesos(cuotaInicial)} ({cuotaInicialSugeridaPct} %)
                   </dd>
                 </div>
                 <div className="flex items-baseline justify-between gap-4">
-                  <dt className="text-arena-600">A</dt>
-                  <dd className="font-medium text-arena-800">
+                  <dt className="text-hueso/60">A</dt>
+                  <dd className="font-medium text-hueso/85">
                     {plazoPorDefectoMeses} meses ·{" "}
                     {tasaMensualPorDefecto.toString().replace(".", ",")} % mensual
                   </dd>
                 </div>
               </dl>
 
-              <p className="mt-4 text-xs leading-relaxed text-arena-500">
+              <p className="mt-4 text-xs leading-relaxed text-hueso/50">
                 Estimado con fines informativos. No es una oferta ni una aprobación
                 de crédito: la cuota final depende del estudio de la entidad
                 financiera.{" "}
                 <Link
                   href="/financiacion"
-                  className="font-medium text-marca-800 underline underline-offset-2"
+                  className="font-medium text-celeste underline underline-offset-2"
                 >
                   Simular con mis propios valores
                 </Link>
@@ -248,27 +248,27 @@ export default async function PaginaDetalleVehiculo({
             <section aria-labelledby="titulo-descripcion">
               <h2
                 id="titulo-descripcion"
-                className="text-2xl font-bold text-marca-900"
+                className="text-2xl font-bold text-hueso"
               >
                 Sobre este vehículo
               </h2>
-              <p className="mt-4 leading-relaxed text-arena-700">
+              <p className="mt-4 leading-relaxed text-hueso/75">
                 {vehiculo.descripcion}
               </p>
             </section>
 
             <section aria-labelledby="titulo-ficha" className="mt-12">
-              <h2 id="titulo-ficha" className="text-2xl font-bold text-marca-900">
+              <h2 id="titulo-ficha" className="text-2xl font-bold text-hueso">
                 Ficha técnica
               </h2>
               <dl className="mt-5 grid gap-x-8 sm:grid-cols-2">
                 {FICHA.map((fila) => (
                   <div
                     key={fila.etiqueta}
-                    className="flex items-baseline justify-between gap-4 border-b border-arena-200 py-3"
+                    className="flex items-baseline justify-between gap-4 border-b border-celeste/15 py-3"
                   >
-                    <dt className="text-sm text-arena-600">{fila.etiqueta}</dt>
-                    <dd className="text-right text-sm font-medium text-arena-900">
+                    <dt className="text-sm text-hueso/60">{fila.etiqueta}</dt>
+                    <dd className="text-right text-sm font-medium text-hueso">
                       {fila.valor}
                     </dd>
                   </div>
@@ -280,7 +280,7 @@ export default async function PaginaDetalleVehiculo({
           <section aria-labelledby="titulo-equipamiento" className="mt-12 lg:mt-0">
             <h2
               id="titulo-equipamiento"
-              className="text-2xl font-bold text-marca-900"
+              className="text-2xl font-bold text-hueso"
             >
               Equipamiento
             </h2>
@@ -289,18 +289,18 @@ export default async function PaginaDetalleVehiculo({
                 <li key={caracteristica} className="flex items-start gap-3">
                   <Check
                     aria-hidden="true"
-                    className="mt-0.5 size-5 shrink-0 text-marca-600"
+                    className="mt-0.5 size-5 shrink-0 text-neon"
                   />
-                  <span className="text-arena-800">{caracteristica}</span>
+                  <span className="text-hueso/85">{caracteristica}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="mt-8 rounded-card bg-marca-100 p-6">
-              <h3 className="font-bold text-marca-900">
+            <div className="mt-8 rounded-card bg-teal/30 p-6">
+              <h3 className="font-bold text-hueso">
                 ¿Quieres verlo antes de decidir?
               </h3>
-              <p className="mt-2 text-sm leading-relaxed text-arena-700">
+              <p className="mt-2 text-sm leading-relaxed text-hueso/75">
                 Te enviamos fotos y videos adicionales, hacemos una videollamada o
                 coordinamos una revisión con el mecánico de tu confianza. Sin
                 compromiso.
@@ -322,7 +322,7 @@ export default async function PaginaDetalleVehiculo({
           <section aria-labelledby="titulo-relacionados" className="mt-16">
             <h2
               id="titulo-relacionados"
-              className="text-2xl font-bold text-marca-900"
+              className="text-2xl font-bold text-hueso"
             >
               También te puede interesar
             </h2>

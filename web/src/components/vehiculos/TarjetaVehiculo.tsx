@@ -24,8 +24,8 @@ export default function TarjetaVehiculo({ vehiculo, prioridad = false }: Props) 
   const cuota = cuotaEstimada(vehiculo.precio);
 
   return (
-    <article className="group relative flex flex-col overflow-hidden rounded-card border border-arena-200 bg-white shadow-suave transition-shadow hover:shadow-elevada">
-      <div className="relative aspect-3/2 overflow-hidden bg-arena-200">
+    <article className="group relative flex flex-col overflow-hidden rounded-card border border-celeste/15 bg-panel shadow-suave transition-shadow hover:shadow-elevada">
+      <div className="relative aspect-3/2 overflow-hidden bg-panel-alto">
         <Image
           src={rutaPublica(portada.src)}
           alt={portada.alt}
@@ -44,44 +44,44 @@ export default function TarjetaVehiculo({ vehiculo, prioridad = false }: Props) 
 
       <div className="flex flex-1 flex-col p-5">
         <header>
-          <h3 className="text-lg leading-snug font-bold text-marca-900">
+          <h3 className="text-lg leading-snug font-bold text-hueso">
             {/* El enlace cubre toda la tarjeta pero el nombre accesible es el título. */}
             <Link href={`/vehiculos/${vehiculo.slug}`} className="after:absolute after:inset-0">
               {titulo}
             </Link>
           </h3>
-          <p className="mt-1 text-sm text-arena-600">
+          <p className="mt-1 text-sm text-hueso/60">
             {vehiculo.version} · {vehiculo.anio}
           </p>
         </header>
 
-        <dl className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-arena-700">
+        <dl className="mt-4 flex flex-wrap gap-x-4 gap-y-2 text-sm text-hueso/75">
           <div className="flex items-center gap-1.5">
-            <Gauge aria-hidden="true" className="size-4 text-arena-500" />
+            <Gauge aria-hidden="true" className="size-4 text-hueso/50" />
             <dt className="sr-only">Kilometraje</dt>
             <dd>{formatearKilometraje(vehiculo.kilometraje)}</dd>
           </div>
           <div className="flex items-center gap-1.5">
-            <Settings2 aria-hidden="true" className="size-4 text-arena-500" />
+            <Settings2 aria-hidden="true" className="size-4 text-hueso/50" />
             <dt className="sr-only">Transmisión</dt>
             <dd>{etiquetas.transmision[vehiculo.transmision]}</dd>
           </div>
           <div className="flex items-center gap-1.5">
-            <Fuel aria-hidden="true" className="size-4 text-arena-500" />
+            <Fuel aria-hidden="true" className="size-4 text-hueso/50" />
             <dt className="sr-only">Combustible</dt>
             <dd>{etiquetas.combustible[vehiculo.combustible]}</dd>
           </div>
         </dl>
 
         <div className="mt-auto pt-5">
-          <p className="text-2xl font-bold text-marca-900">
+          <p className="cifra text-2xl font-bold text-hueso">
             <span className="sr-only">Precio: </span>
             <span className="sm:hidden">{formatearPesosCompacto(vehiculo.precio)}</span>
             <span className="hidden sm:inline">{formatearPesos(vehiculo.precio)}</span>
           </p>
-          <p className="mt-1 text-sm text-arena-600">
+          <p className="mt-1 text-sm text-hueso/60">
             Desde{" "}
-            <span className="font-semibold text-acento-700">
+            <span className="font-semibold text-neon">
               {formatearPesos(cuota)}
             </span>{" "}
             al mes
