@@ -1,24 +1,34 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 427" width="640" height="427" role="img" aria-label="Imagen de referencia pendiente de Nissan Kicks">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 427" width="640" height="427" role="img" aria-label="Imagen de referencia pendiente">
   <defs>
-    <linearGradient id="fondo" x1="0" y1="0" x2="0.35" y2="1">
-      <stop offset="0%" stop-color="#585c60" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#585c60" stop-opacity="0.6"/>
+    <linearGradient id="fg41" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="#0A1F1E"/>
+      <stop offset="100%" stop-color="#005150"/>
     </linearGradient>
-    <pattern id="rejilla" width="32" height="32" patternUnits="userSpaceOnUse">
-      <path d="M32 0 L0 0 0 32" fill="none" stroke="#faf8f5" stroke-opacity="0.07" stroke-width="1"/>
+    <radialGradient id="hg41" cx="0.78" cy="0.18" r="0.6">
+      <stop offset="0%" stop-color="#AEEA00" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#AEEA00" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="rg41" width="34" height="34" patternUnits="userSpaceOnUse">
+      <path d="M34 0 L0 0 0 34" fill="none" stroke="#7ECAD1" stroke-opacity="0.08" stroke-width="1"/>
     </pattern>
   </defs>
-  <rect width="640" height="427" fill="url(#fondo)"/>
-  <rect width="640" height="427" fill="url(#rejilla)"/>
-  <g transform="translate(0,60)">
-    <ellipse cx="320" cy="258" rx="248" ry="15" fill="#faf8f5" opacity="0.10"/>
-    <path d="M60 250 L60 205 Q60 190 78 184 L140 166 Q195 122 250 120 L360 120 Q420 122 470 166 L560 186 Q580 192 580 210 L580 250 Z" fill="#faf8f5" opacity="0.20"/>
-    <circle cx="170" cy="250" r="34" fill="#faf8f5" opacity="0.26"/>
-    <circle cx="170" cy="250" r="15" fill="#faf8f5" opacity="0.12"/>
-    <circle cx="462" cy="250" r="34" fill="#faf8f5" opacity="0.26"/>
-    <circle cx="462" cy="250" r="15" fill="#faf8f5" opacity="0.12"/>
+
+  <rect width="640" height="427" fill="url(#fg41)"/>
+  <rect width="640" height="427" fill="url(#rg41)"/>
+  <rect width="640" height="427" fill="url(#hg41)"/>
+
+  <g transform="translate(0,58)">
+    <ellipse cx="320" cy="258" rx="248" ry="14" fill="#7ECAD1" opacity="0.10"/>
+    <path d="M60 250 L60 205 Q60 190 78 184 L140 166 Q195 122 250 120 L360 120 Q420 122 470 166 L560 186 Q580 192 580 210 L580 250 Z" fill="#7ECAD1" opacity="0.22"/>
+    <path d="M60 250 L60 205 Q60 190 78 184 L140 166 Q195 122 250 120 L360 120 Q420 122 470 166 L560 186 Q580 192 580 210 L580 250 Z" fill="none" stroke="#7ECAD1" stroke-opacity="0.35" stroke-width="1.5"/>
+    <circle cx="170" cy="250" r="34" fill="#7ECAD1" opacity="0.20"/>
+    <circle cx="170" cy="250" r="15" fill="#0A1F1E" opacity="0.55"/>
+    <circle cx="462" cy="250" r="34" fill="#7ECAD1" opacity="0.20"/>
+    <circle cx="462" cy="250" r="15" fill="#0A1F1E" opacity="0.55"/>
   </g>
-  <text x="608" y="46" text-anchor="end" font-family="system-ui, sans-serif" font-size="12.5" letter-spacing="1.6" fill="#faf8f5" opacity="0.7">FOTO PENDIENTE · VISTA LATERAL</text>
-  <text x="32" y="368" font-family="system-ui, sans-serif" font-size="23" font-weight="700" fill="#faf8f5">Nissan Kicks</text>
-  <text x="32" y="394" font-family="system-ui, sans-serif" font-size="15" fill="#faf8f5" opacity="0.8">Advance 1.6 CVT · 2022</text>
+
+  <g opacity="0.9">
+    <rect x="28" y="391" width="9" height="9" fill="#AEEA00"/>
+    <text x="46" y="400" font-family="system-ui, sans-serif" font-size="11.5" font-weight="600" letter-spacing="2.2" fill="#AEEA00">FOTO PENDIENTE</text>
+  </g>
 </svg>
